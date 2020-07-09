@@ -1,0 +1,139 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       15/May/2018  03:06:17
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\app\signal\src\process.c
+#    Command line =  
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\app\signal\src\process.c
+#        -D LPLD_K60 -lCN
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\RAM\List -lB
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\RAM\List -o
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\RAM\Obj --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None
+#        --dlib_config "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\ -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\CPU\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\common\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\LPLD\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\FatFs\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\USB\common\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\..\..\lib\USB\class\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\control\inc\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\control\src\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\debug\inc\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\debug\src\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\device\inc\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\device\src\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\driver\inc\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\driver\src\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\signal\inc\
+#        -I
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\signal\src\
+#        -I D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\..\app\system\
+#        -Ol -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\RAM\List\process.lst
+#    Object file  =  
+#        D:\Freescale\信标\13thBeacon\project\Beacon_XBY\iar\RAM\Obj\process.o
+#
+###############################################################################
+
+D:\Freescale\信标\13thBeacon\project\Beacon_XBY\app\signal\src\process.c
+      1          #include "include.h"
+      2          #include "process.h"
+      3          
+      4          void round_process()
+      5          {
+      6              uint8 i;
+      7              int16 err_start_line = 0;
+      8              int16 err_end_line = 0;
+      9              
+     10              float line_err = 0;		//中心偏差总和
+     11              float weight_count = 1;			//偏差权和
+     12              
+     13              if(Detect.inround_flag == 1)
+     14              {
+     15                      if(round_mode == ROUND_LEFT)
+     16                      {
+     17                          for(i=0;i<img_furthest_line;i++)
+     18                          {
+     19                              if(track_center[i]!=NOT_FOUND)
+     20                              {
+     21                                  {
+     22                                      track_center_temp[i] = Limiter(edge_left[i] + (CUR_ROAD_WIDTH(i))/2,0,127);
+     23                                  }
+     24                              }
+     25                              
+     26                          }
+     27                      }
+     28                      else// if(round_mode == ROUND_RIGHT)
+     29                      {
+     30                          for(i=0;i<img_furthest_line;i++)
+     31                          {
+     32                              if(track_center[i]!=NOT_FOUND)
+     33                              {
+     34                                  {
+     35                                      track_center_temp[i] = Limiter(edge_right[i] - (CUR_ROAD_WIDTH(i))/2,0,127);
+     36                                  }
+     37                              }
+     38                          }
+     39                      }
+     40                      
+     41                  err_start_line = 0;
+     42                  err_end_line = 40;
+     43                  if(Detect.outround_flag == 1)
+     44                  {
+     45                      err_start_line = 0;
+     46                      err_end_line = Detect.outround_line+10;
+     47                  }
+     48                  for(i=err_start_line;i<err_end_line;i++)
+     49                  {
+     50                      if(track_center_temp[i]!=NOT_FOUND)
+     51                      {
+     52                          line_err += (track_center_temp[i]-63)*err_weight[i];
+     53                          weight_count += err_weight[i];
+     54                      }
+     55                  }
+     56                  gl_image_err = line_err/weight_count;
+     57              }
+     58                      
+     59          }
+
+Errors: 1
+Warnings: 17

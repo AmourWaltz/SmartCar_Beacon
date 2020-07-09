@@ -1,0 +1,368 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       17/Jul/2018  01:12:26
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\I2C.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\I2C.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\I2C.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\I2C.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\src\I2C.c
+      1          //#include "I2C.h"
+      2          //#include "include.h"
+      3          ///**************************************************
+      4          //统一标准，除初始化和终止之外进入每个函数时
+      5          //SCL均应处于低电平，函数结束时也将SCL拉低 
+      6          //***************************************************/
+      7          //
+      8          //static GPIO_InitTypeDef gpio_SDA_init_struct, gpio_SCL_init_struct;
+      9          //
+     10          ///******************* 以下为设置区域 *************************/	
+     11          ///* 模拟引脚选择 */ 
+     12          //#define SDA_PORT PTE
+     13          //#define SDA_PIN  GPIO_Pin0
+     14          //#define SDA_NUM  0
+     15          //
+     16          //#define SCL_PORT PTE
+     17          //#define SCL_PIN  GPIO_Pin1
+     18          //#define SCL_NUM  1
+     19          //
+     20          //#define I2C_DELAY_CNT 4
+     21          //
+     22          ///* 电平设置 */
+     23          //#define SDA_SET(x) { \
+     24          //                    LPLD_GPIO_Output_b(SDA_PORT,SDA_NUM ,(x)); \
+     25          //				} 
+     26          //#define SDAHI           SDA_SET(1)
+     27          //#define SDALO           SDA_SET(0)
+     28          //#define SCLLO     { \
+     29          //                    LPLD_GPIO_Output_b(SCL_PORT,SCL_NUM ,LOW); \
+     30          //					} 
+     31          //
+     32          //#define SCLHI     { \
+     33          //                    LPLD_GPIO_Output_b(SCL_PORT,SCL_NUM ,HIGH);\
+     34          //					}
+     35          //
+     36          //
+     37          //#define SDA1_IN  {\
+     38          //                    gpio_SDA_init_struct.GPIO_Dir = DIR_INPUT;\
+     39          //                      LPLD_GPIO_Init(gpio_SDA_init_struct);\
+     40          //                    }
+     41          //#define SDA1_OUT {\
+     42          //                    gpio_SDA_init_struct.GPIO_Dir = DIR_OUTPUT;\
+     43          //                      LPLD_GPIO_Init(gpio_SDA_init_struct);\
+     44          //                    }
+     45          //
+     46          //#define GET_SDA()  LPLD_GPIO_Input_b(SDA_PORT, SDA_NUM)
+     47          //
+     48          //
+     49          //#define GET_SCL()  LPLD_GPIO_Input_b(SCL_PORT, SCL_NUM)
+     50          //
+     51          ////---------------------------------------------------------------------*
+     52          ////函数名: I2C_init *
+     53          ////功 能: 初始化I2C *
+     54          ////参 数: 无 *
+     55          ////返 回: 无 *
+     56          ////---------------------------------------------------------------------*
+     57          //void I2C_init()
+     58          //{
+     59          //    gpio_SDA_init_struct.GPIO_PTx = SDA_PORT;
+     60          //    gpio_SDA_init_struct.GPIO_Pins = SDA_PIN;                  //注意：初始化时得用GPIO_Pinx，而LPLD_GPIO_Output_b中直接用x
+     61          //    gpio_SDA_init_struct.GPIO_Dir = DIR_OUTPUT;
+     62          //    gpio_SDA_init_struct.GPIO_Output = OUTPUT_H;
+     63          //    gpio_SDA_init_struct.GPIO_PinControl = INPUT_PULL_UP;      //上拉
+     64          //    LPLD_GPIO_Init(gpio_SDA_init_struct);    
+     65          //    
+     66          //    gpio_SCL_init_struct.GPIO_PTx = SCL_PORT;
+     67          //    gpio_SCL_init_struct.GPIO_Pins = SCL_PIN;                  //注意：初始化时得用GPIO_Pinx，而LPLD_GPIO_Output_b中直接用x
+     68          //    gpio_SCL_init_struct.GPIO_Dir = DIR_OUTPUT;
+     69          //    gpio_SCL_init_struct.GPIO_Output = OUTPUT_H;
+     70          //    gpio_SCL_init_struct.GPIO_PinControl = INPUT_PULL_UP;      //上拉
+     71          //    LPLD_GPIO_Init(gpio_SCL_init_struct);      
+     72          //}
+     73          //
+     74          ////---------------------------------------------------------------------*
+     75          ////函数名: I2C_start *
+     76          ////功 能: 产生开始信号 *
+     77          ////参 数: 无 *
+     78          ////返 回: 无 *
+     79          ////---------------------------------------------------------------------*
+     80          //void I2C_start()
+     81          //{ 
+     82          //    SDA1_OUT;
+     83          //    SDAHI;
+     84          //    SCLHI;
+     85          //    SDALO;
+     86          //}
+     87          //
+     88          //
+     89          ////---------------------------------------------------------------------*
+     90          ////函数名: I2C_stop *
+     91          ////功 能: 产生停止信号 *
+     92          ////参 数: 无 *
+     93          ////返 回: 无 *
+     94          ////---------------------------------------------------------------------*
+     95          //void I2C_stop()
+     96          //{
+     97          //    SDA1_OUT;
+     98          //    SDALO;
+     99          //    SCLHI;
+    100          //    SDAHI;
+    101          //}
+    102          //
+    103          ////---------------------------------------------------------------------*
+    104          ////函数名: I2C_Ack *
+    105          ////功 能: 接受从机应答信号 *
+    106          ////参 数: 无 *
+    107          ////返 回: 无 *
+    108          ////---------------------------------------------------------------------*
+    109          //void I2C_Ack()
+    110          //{
+    111          //    uint8 i=0;
+    112          //    SDA1_IN;    
+    113          //    SCLHI;
+    114          //    while((GET_SDA()) && (i < 10))
+    115          //    {
+    116          //        i++;
+    117          //    }
+    118          //    SCLLO;
+    119          //}
+    120          //
+    121          ////---------------------------------------------------------------------*
+    122          ////函数名: I2C_m_Ack *
+    123          ////功 能: 产生主机应答信号 *
+    124          ////参 数: 无 *
+    125          ////返 回: 无 *
+    126          ////---------------------------------------------------------------------*
+    127          //void I2C_m_Ack()
+    128          //{    
+    129          //    SCLLO;
+    130          //    SDA1_OUT;
+    131          //    SDALO;
+    132          //    SCLHI;
+    133          //    SCLLO;
+    134          //}
+    135          //
+    136          ////---------------------------------------------------------------------*
+    137          ////函数名: I2C_m_nAck *
+    138          ////功 能: 产生主机不应答信号 *
+    139          ////参 数: 无 *
+    140          ////返 回: 无 *
+    141          ////---------------------------------------------------------------------*
+    142          //void I2C_m_nAck()
+    143          //{
+    144          //    SCLLO;
+    145          //    SDA1_OUT;
+    146          //    SDAHI;
+    147          //    SCLHI;
+    148          //    SCLLO;
+    149          //}
+    150          //
+    151          ////---------------------------------------------------------------------*
+    152          ////函数名: I2C_sendbyte *
+    153          ////功 能: 像I2C总线写一字节数据 *
+    154          ////参 数: 数据 *
+    155          ////返 回: 无 *
+    156          ////---------------------------------------------------------------------*
+    157          //void I2C_sendbyte(uint8 data)
+    158          //{
+    159          //    uint8 i;
+    160          //    SCLLO;
+    161          //    SDA1_OUT;
+    162          //    for(i=0; i<8; i++)
+    163          //    {
+    164          //        /***发送数据***/
+    165          //        SDA_SET(data&0x80);
+    166          //        SCLHI;
+    167          //        data <<= 1;
+    168          //        SCLLO;
+    169          //    }
+    170          //    SDAHI;
+    171          //}
+    172          //
+    173          ////---------------------------------------------------------------------*
+    174          ////函数名: I2C_readbyte *
+    175          ////功 能: 从I2C总线读一字节数据 *
+    176          ////参 数: 无 *
+    177          ////返 回: 1byte数据 * 
+    178          ////---------------------------------------------------------------------*
+    179          //uint8 I2C_readbyte()
+    180          //{
+    181          //    uint8 i=0, data=0;
+    182          //    SDA1_IN;
+    183          //    for(i=0, data=0; i<8; i++)
+    184          //    {
+    185          //        /***接受数据***/
+    186          //        SCLHI;
+    187          //        data <<= 1;
+    188          //        data |= GET_SDA();
+    189          //        SCLLO;
+    190          //    }
+    191          //    return data;
+    192          //}
+    193          //
+    194          ////---------------------------------------------------------------------*
+    195          ////函数名:  delay *
+    196          ////功 能:  短暂延时*
+    197          ////参 数:  无*
+    198          ////返 回: 无 *
+    199          ////---------------------------------------------------------------------*
+    200          //void delay()
+    201          //{
+    202          //    int16 i;
+    203          //    for(i = 5; i>0; i--);
+    204          //}
+    205          //
+    206          //
+    207          //
+    208          ///*******************************************************
+    209          //	函数名: I2C_write_1                                                   
+    210          //	功  能: 向I2C总线设备写一个字节                                                
+    211          //	参  数: addr : 设备地址 
+    212          //            cmd  : 指令 
+    213          //            data : 数据                                                  
+    214          //	返  回: 无                                                          
+    215          //*********************************************************/
+    216          //void I2C_write_1(uint8 addr,uint8 cmd, uint8 data)
+    217          //{
+    218          //    I2C_start();
+    219          //    I2C_sendbyte(addr);
+    220          //    I2C_Ack();
+    221          //    I2C_sendbyte(cmd);
+    222          //    I2C_Ack();
+    223          //    I2C_sendbyte(data);
+    224          //    I2C_Ack();
+    225          //    I2C_stop();
+    226          // } 
+    227          ///*******************************************************
+    228          //	函数名: I2C_write_N                                                   
+    229          //	功  能: 向I2C总线设备写n个字节                                               
+    230          //	参  数: addr : 设备地址 
+    231          //            cmd  : 指令 
+    232          //            n     : 传输字节数 
+    233          //            *data : 数据块位置                                                                          
+    234          //	返  回: 无                                                          
+    235          //*********************************************************/
+    236          //void I2C_write_N(uint8 addr,uint8 cmd, uint8 n, uint8 *data)
+    237          //{ 
+    238          //    int16 i;
+    239          //    I2C_start();
+    240          //    I2C_sendbyte(addr);
+    241          //    I2C_Ack();
+    242          //    I2C_sendbyte(cmd);
+    243          //    I2C_Ack();
+    244          //    for(i = 0; i < n ; i++)
+    245          //    {        
+    246          //        I2C_sendbyte(data[i]);
+    247          //        I2C_Ack();
+    248          //    }
+    249          //    I2C_stop();
+    250          //}
+    251          ///*******************************************************
+    252          //	函数名: I2C_read_N                                                   
+    253          //	功  能: 向I2C总线设备读n个字节                                             
+    254          //	参  数: addr : 设备地址 
+    255          //            cmd  : 指令 
+    256          //            n     : 传输字节数 
+    257          //            *data : 数据块位置                                                                 
+    258          //	返  回: 无                                                                 
+    259          //*********************************************************/
+    260          //void I2C_read_N(uint8 addr,uint8 cmd, uint8 n, uint8 *data)
+    261          //{
+    262          //    int16 i;
+    263          //    I2C_start();
+    264          //    I2C_sendbyte(addr&0xfe);
+    265          //    I2C_Ack();
+    266          //    I2C_sendbyte(cmd);
+    267          //    I2C_Ack();
+    268          //    
+    269          //    I2C_start();
+    270          //    I2C_sendbyte(addr|0x01);
+    271          //    I2C_Ack();
+    272          //    for(i = 0; i < n-1 ; i++)
+    273          //    {        
+    274          //        data[i] = I2C_readbyte();
+    275          //        I2C_m_Ack();
+    276          //    }
+    277          //    data[i] = I2C_readbyte();
+    278          //    I2C_m_nAck();
+    279          //    I2C_stop();
+    280          //}
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

@@ -1,0 +1,361 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       19/Jul/2019  16:52:16
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\init.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\system\init.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\List" -lB
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\control\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\debug\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\device\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\driver\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\signal\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\system\" -Ol -I "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include\"
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\RAM\List\init.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\Obj\init.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\init.c
+      1          #include "include.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void NVIC_EnableIRQ(IRQn_Type)
+   \                     NVIC_EnableIRQ: (+1)
+   \   00000000   0x2101             MOVS     R1,#+1
+   \   00000002   0xF010 0x021F      ANDS     R2,R0,#0x1F
+   \   00000006   0x4091             LSLS     R1,R1,R2
+   \   00000008   0x....             LDR.N    R2,??DataTable2  ;; 0xe000e100
+   \   0000000A   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000000C   0x0940             LSRS     R0,R0,#+5
+   \   0000000E   0xF842 0x1020      STR      R1,[R2, R0, LSL #+2]
+   \   00000012   0x4770             BX       LR               ;; return
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void Init_All()
+      4          {      
+   \                     Init_All: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      5              DisableInterrupts;
+   \   00000002   0xB672             CPSID    I
+      6               
+      7              Servo_Init();
+   \   00000004   0x.... 0x....      BL       Servo_Init
+      8              Motor_Init();
+   \   00000008   0x.... 0x....      BL       Motor_Init
+      9              //Flash
+     10              FLASH_Init();  
+   \   0000000C   0x.... 0x....      BL       FLASH_Init
+     11              FlashReadData();
+   \   00000010   0x.... 0x....      BL       FlashReadData
+     12              InitFlashParameter();
+   \   00000014   0x.... 0x....      BL       InitFlashParameter
+     13          
+     14              //OLED初始化
+     15              oled_init();  
+   \   00000018   0x.... 0x....      BL       oled_init
+     16          
+     17              //摄像头初始化    
+     18              SCCB_GPIO_init();    
+   \   0000001C   0x.... 0x....      BL       SCCB_GPIO_init
+     19              ov7725_eagle_init();
+   \   00000020   0x.... 0x....      BL       ov7725_eagle_init
+     20              Camera_Init();
+   \   00000024   0x.... 0x....      BL       Camera_Init
+     21              
+     22              gc_not_found_count = 4;//连续检测不到的次数，远距离时为5，近距离为4，初始设为5
+   \   00000028   0x2004             MOVS     R0,#+4
+   \   0000002A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000002C   0x7008             STRB     R0,[R1, #+0]
+     23          
+     24              //五向按键，蜂鸣器，LED灯，拨码按键检测
+     25              Switch_Init();
+   \   0000002E   0x.... 0x....      BL       Switch_Init
+     26              Beep_Init();
+   \   00000032   0x.... 0x....      BL       Beep_Init
+     27              LED_Init();
+   \   00000036   0x.... 0x....      BL       LED_Init
+     28              Five_Dir_Init();
+   \   0000003A   0x.... 0x....      BL       Five_Dir_Init
+     29              Infrared_Init();
+   \   0000003E   0x.... 0x....      BL       Infrared_Init
+     30          
+     31              //中断
+     32              PIT_Init();
+   \   00000042   0x.... 0x....      BL       PIT_Init
+     33              
+     34              //ADC
+     35              ADC_Init();
+   \   00000046   0x.... 0x....      BL       ADC_Init
+     36              
+     37              oled_fill(0x00); //去掉后液晶就不能正常显示了，不知为何
+   \   0000004A   0x2000             MOVS     R0,#+0
+   \   0000004C   0x.... 0x....      BL       oled_fill
+     38              
+     39              //GPT
+     40              GPT_Init();
+   \   00000050   0x.... 0x....      BL       GPT_Init
+     41              
+     42              //红外
+     43              TELE_AD_Init();
+   \   00000054   0x.... 0x....      BL       TELE_AD_Init
+     44              
+     45              //超声波定向
+     46          //    ADC_Ultrasonic_Init();
+     47          
+     48              //UART
+     49              UART_Init();
+   \   00000058   0x.... 0x....      BL       UART_Init
+     50              
+     51          //    //RTC
+     52          //    //RTC_Init();
+     53              
+     54              //中断优先级    
+     55              NVIC_Init();  
+   \   0000005C   0x.... 0x....      BL       NVIC_Init
+     56          
+     57              PIT_ONE_Enable(PIT_0);    
+   \   00000060   0x2000             MOVS     R0,#+0
+   \   00000062   0x.... 0x....      BL       PIT_ONE_Enable
+     58              
+     59          //    PIT_ONE_Enable(PIT_2);
+     60          //    PIT_ONE_Enable(PIT_3);
+     61          
+     62              //使能场中断
+     63              enable_irq(V_PORT_IRQn);
+   \   00000066   0x2057             MOVS     R0,#+87
+   \   00000068   0x.... 0x....      BL       NVIC_EnableIRQ
+     64              enable_irq(H_PORT_IRQn);
+   \   0000006C   0x2058             MOVS     R0,#+88
+   \   0000006E   0x.... 0x....      BL       NVIC_EnableIRQ
+     65              enable_irq(Reserved110_IRQn);
+   \   00000072   0x205E             MOVS     R0,#+94
+   \   00000074   0x.... 0x....      BL       NVIC_EnableIRQ
+     66                  
+     67              EnableInterrupts;
+   \   00000078   0xB662             CPSIE    I
+     68          
+     69              //需要延时函数   
+     70              
+     71              Delay_ms(500);//需要pit所以最后才延时
+   \   0000007A   0xF44F 0x70FA      MOV      R0,#+500
+   \   0000007E   0x.... 0x....      BL       Delay_ms
+     72              oled_fill(0x00);
+   \   00000082   0x2000             MOVS     R0,#+0
+   \   00000084   0x.... 0x....      BL       oled_fill
+     73          }
+   \   00000088   0xBD01             POP      {R0,PC}          ;; return
+     74          
+     75          /*===============================================================
+     76          	@brief     等待发车
+     77          	@function  检测到图像面积后启动发车
+     78          	@note      也可以改为检测到红外信号或超声波信号后启动
+     79          ==================================================================*/
+     80          
+
+   \                                 In section .text, align 2, keep-with-next
+     81          void Wait_Beacon()
+     82          {
+   \                     Wait_Beacon: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+   \   00000002   0xE004             B.N      ??Wait_Beacon_0
+     83          //  while(1)
+     84          //  {
+     85          //    if(gi_image_area == 0)
+     86          //    {
+     87          //      //Beep_On();
+     88          //      guc_car_run_flag = CAR_STOP;      
+     89          //    }
+     90          //    else
+     91          //    {
+     92          //      //Beep_Off();
+     93          //      guc_car_run_flag = CAR_RUN; 
+     94          //      PIT_ONE_Enable(PIT_1);
+     95          //      break;
+     96          //    }
+     97          //  }
+     98          
+     99              while(1)
+    100              {
+    101                  if((!Infrared_Start()) && (!gi_image_center))
+    102                  {
+    103                      Beep_On();
+   \                     ??Wait_Beacon_1: (+1)
+   \   00000004   0x.... 0x....      BL       Beep_On
+    104                      guc_car_run_flag = CAR_STOP;      
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_2
+   \   0000000C   0x7008             STRB     R0,[R1, #+0]
+    105                  }
+   \                     ??Wait_Beacon_0: (+1)
+   \   0000000E   0x.... 0x....      BL       Infrared_Start
+   \   00000012   0x2800             CMP      R0,#+0
+   \   00000014   0xD104             BNE.N    ??Wait_Beacon_2
+   \   00000016   0x....             LDR.N    R0,??DataTable2_3
+   \   00000018   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   0000001C   0x2800             CMP      R0,#+0
+   \   0000001E   0xD0F1             BEQ.N    ??Wait_Beacon_1
+    106                  else
+    107                  {
+    108                      Beep_Off();
+   \                     ??Wait_Beacon_2: (+1)
+   \   00000020   0x.... 0x....      BL       Beep_Off
+    109                      guc_car_run_flag = CAR_RUN;
+   \   00000024   0x2001             MOVS     R0,#+1
+   \   00000026   0x....             LDR.N    R1,??DataTable2_2
+   \   00000028   0x7008             STRB     R0,[R1, #+0]
+    110                      gul_time_start = gul_time_100us;
+   \   0000002A   0x....             LDR.N    R0,??DataTable2_4
+   \   0000002C   0x6800             LDR      R0,[R0, #+0]
+   \   0000002E   0x....             LDR.N    R1,??DataTable2_5
+   \   00000030   0x6008             STR      R0,[R1, #+0]
+    111                      break;
+    112                  }
+    113              }
+    114          }
+   \   00000032   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0xE000E100         DC32     0xe000e100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     gc_not_found_count
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x........         DC32     guc_car_run_flag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \   00000000   0x........         DC32     gi_image_center
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \   00000000   0x........         DC32     gul_time_100us
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \   00000000   0x........         DC32     gul_time_start
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Init_All
+         8   -> ADC_Init
+         8   -> Beep_Init
+         8   -> Camera_Init
+         8   -> Delay_ms
+         8   -> FLASH_Init
+         8   -> Five_Dir_Init
+         8   -> FlashReadData
+         8   -> GPT_Init
+         8   -> Infrared_Init
+         8   -> InitFlashParameter
+         8   -> LED_Init
+         8   -> Motor_Init
+         8   -> NVIC_EnableIRQ
+         8   -> NVIC_Init
+         8   -> PIT_Init
+         8   -> PIT_ONE_Enable
+         8   -> SCCB_GPIO_init
+         8   -> Servo_Init
+         8   -> Switch_Init
+         8   -> TELE_AD_Init
+         8   -> UART_Init
+         8   -> oled_fill
+         8   -> oled_init
+         8   -> ov7725_eagle_init
+       0   NVIC_EnableIRQ
+       8   Wait_Beacon
+         8   -> Beep_Off
+         8   -> Beep_On
+         8   -> Infrared_Start
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+     138  Init_All
+      20  NVIC_EnableIRQ
+      52  Wait_Beacon
+
+ 
+ 234 bytes in section .text
+ 
+ 234 bytes of CODE memory
+
+Errors: none
+Warnings: none

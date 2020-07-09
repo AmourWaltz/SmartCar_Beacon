@@ -1,0 +1,920 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       08/Jul/2018  16:14:24
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\app\driver\src\GPIO_I2C.c
+#    Command line =  
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\app\driver\src\GPIO_I2C.c
+#        -D LPLD_K60 -lCN
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\FLASH\List -lB
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\FLASH\List -o
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\FLASH\Obj --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None
+#        --dlib_config "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\ -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\CPU\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\common\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\LPLD\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\FatFs\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\USB\common\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\USB\class\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\control\inc\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\control\src\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\debug\inc\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\debug\src\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\device\inc\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\device\src\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\driver\inc\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\driver\src\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\signal\inc\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\signal\src\
+#        -I D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\app\system\
+#        -I
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\
+#        -Ol -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\FLASH\List\GPIO_I2C.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\iar\FLASH\Obj\GPIO_I2C.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1\project\Beacon_XBY\app\driver\src\GPIO_I2C.c
+      1          #include "GPIO_I2C.h"
+      2          
+      3          /* 电平定义 */
+      4          #define HIGH   OUTPUT_H
+      5          #define LOW    OUTPUT_L
+      6          
+      7          /*******************************************************
+      8          	函数名: GPIO_I2C_Init                                                   
+      9          	功  能: 初始化I2C                                                 
+     10          	参  数: 无                                                                      
+     11          	返  回: 无                                                          
+     12          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     13          void GPIO_I2C_Init()
+     14          {	
+   \                     GPIO_I2C_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     15              static GPIO_InitTypeDef gpio_SDA_init_struct, gpio_SCL_init_struct;
+     16              
+     17              gpio_SDA_init_struct.GPIO_PTx = SDA_PORT;
+   \   00000002   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000004   0x....             LDR.N    R1,??DataTable7_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     18              gpio_SDA_init_struct.GPIO_Pins = SDA_PIN;                  //注意：初始化时得用GPIO_Pinx，而LPLD_GPIO_Output_b中直接用x
+   \   00000008   0xF44F 0x5080      MOV      R0,#+4096
+   \   0000000C   0x....             LDR.N    R1,??DataTable7_1
+   \   0000000E   0x6048             STR      R0,[R1, #+4]
+     19              gpio_SDA_init_struct.GPIO_Dir = DIR_OUTPUT;
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0x....             LDR.N    R1,??DataTable7_1
+   \   00000014   0x7308             STRB     R0,[R1, #+12]
+     20              gpio_SDA_init_struct.GPIO_Output = OUTPUT_H;
+   \   00000016   0x2001             MOVS     R0,#+1
+   \   00000018   0x....             LDR.N    R1,??DataTable7_1
+   \   0000001A   0x7348             STRB     R0,[R1, #+13]
+     21              gpio_SDA_init_struct.GPIO_PinControl = INPUT_PULL_UP;      //上拉
+   \   0000001C   0x2003             MOVS     R0,#+3
+   \   0000001E   0x....             LDR.N    R1,??DataTable7_1
+   \   00000020   0x6088             STR      R0,[R1, #+8]
+     22              LPLD_GPIO_Init(gpio_SDA_init_struct);    
+   \   00000022   0x....             LDR.N    R1,??DataTable7_1
+   \   00000024   0xB084             SUB      SP,SP,#+16
+   \   00000026   0x4668             MOV      R0,SP
+   \   00000028   0x2214             MOVS     R2,#+20
+   \   0000002A   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002E   0xBC0F             POP      {R0-R3}
+   \   00000030   0x.... 0x....      BL       LPLD_GPIO_Init
+     23              
+     24              gpio_SCL_init_struct.GPIO_PTx = SCL_PORT;
+   \   00000034   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000036   0x....             LDR.N    R1,??DataTable7_2
+   \   00000038   0x6008             STR      R0,[R1, #+0]
+     25              gpio_SCL_init_struct.GPIO_Pins = SCL_PIN;                  //注意：初始化时得用GPIO_Pinx，而LPLD_GPIO_Output_b中直接用x
+   \   0000003A   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000003E   0x....             LDR.N    R1,??DataTable7_2
+   \   00000040   0x6048             STR      R0,[R1, #+4]
+     26              gpio_SCL_init_struct.GPIO_Dir = DIR_OUTPUT;
+   \   00000042   0x2001             MOVS     R0,#+1
+   \   00000044   0x....             LDR.N    R1,??DataTable7_2
+   \   00000046   0x7308             STRB     R0,[R1, #+12]
+     27              gpio_SCL_init_struct.GPIO_Output = OUTPUT_H;
+   \   00000048   0x2001             MOVS     R0,#+1
+   \   0000004A   0x....             LDR.N    R1,??DataTable7_2
+   \   0000004C   0x7348             STRB     R0,[R1, #+13]
+     28              gpio_SCL_init_struct.GPIO_PinControl = INPUT_PULL_UP;      //上拉
+   \   0000004E   0x2003             MOVS     R0,#+3
+   \   00000050   0x....             LDR.N    R1,??DataTable7_2
+   \   00000052   0x6088             STR      R0,[R1, #+8]
+     29              LPLD_GPIO_Init(gpio_SCL_init_struct);      
+   \   00000054   0x....             LDR.N    R1,??DataTable7_2
+   \   00000056   0xB084             SUB      SP,SP,#+16
+   \   00000058   0x4668             MOV      R0,SP
+   \   0000005A   0x2214             MOVS     R2,#+20
+   \   0000005C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000060   0xBC0F             POP      {R0-R3}
+   \   00000062   0x.... 0x....      BL       LPLD_GPIO_Init
+     30              		
+     31          }
+   \   00000066   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \                     `GPIO_I2C_Init::gpio_SDA_init_struct`:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+   \                     `GPIO_I2C_Init::gpio_SCL_init_struct`:
+   \   00000000                      DS8 20
+     32          
+     33          /*******************************************************
+     34          	函数名: GPIO_I2C_Start                                                   
+     35          	功  能: 开始信号                                                
+     36          	参  数: 无                                                                      
+     37          	返  回: 无                                                          
+     38          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     39          static void GPIO_I2C_Start()
+     40          {
+   \                     GPIO_I2C_Start: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     41              SET_SDA(HIGH);
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x210C             MOVS     R1,#+12
+   \   00000006   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000008   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     42              SCL_H;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x210B             MOVS     R1,#+11
+   \   00000010   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000012   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     43              SET_SDA(LOW);	
+   \   00000016   0x2200             MOVS     R2,#+0
+   \   00000018   0x210C             MOVS     R1,#+12
+   \   0000001A   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000001C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     44          }
+   \   00000020   0xBD01             POP      {R0,PC}          ;; return
+     45          
+     46          /*******************************************************
+     47          	函数名: GPIO_I2C_Restart                                                   
+     48          	功  能: 重新开始信号                                                
+     49          	参  数: 无                                                                      
+     50          	返  回: 无                                                          
+     51          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     52          static void GPIO_I2C_Restart()
+     53          {
+   \                     GPIO_I2C_Restart: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     54              SET_SDA(HIGH);
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x210C             MOVS     R1,#+12
+   \   00000006   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000008   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     55              SCL_H;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x210B             MOVS     R1,#+11
+   \   00000010   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000012   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     56              SET_SDA(LOW);	
+   \   00000016   0x2200             MOVS     R2,#+0
+   \   00000018   0x210C             MOVS     R1,#+12
+   \   0000001A   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000001C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     57          }
+   \   00000020   0xBD01             POP      {R0,PC}          ;; return
+     58          
+     59          /*******************************************************
+     60          	函数名: GPIO_I2C_Stop                                                   
+     61          	功  能: 停止信号                                                
+     62          	参  数: 无                                                                      
+     63          	返  回: 无                                                          
+     64          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     65          static void GPIO_I2C_Stop()
+     66          {
+   \                     GPIO_I2C_Stop: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     67              SET_SDA(LOW);
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x210C             MOVS     R1,#+12
+   \   00000006   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000008   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     68              SCL_H;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x210B             MOVS     R1,#+11
+   \   00000010   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000012   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     69              SET_SDA(HIGH);	
+   \   00000016   0x2201             MOVS     R2,#+1
+   \   00000018   0x210C             MOVS     R1,#+12
+   \   0000001A   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000001C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     70          }
+   \   00000020   0xBD01             POP      {R0,PC}          ;; return
+     71          
+     72          /*******************************************************
+     73          	函数名: GPIO_I2C_Write_Register                                                   
+     74          	功  能: 模拟写寄存器                                                
+     75          	参  数: u8Data: 待写入数据;                                                                     
+     76          	返  回: 无    
+     77              备  注：交界处也要设置   	
+     78          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     79          static void GPIO_I2C_Write_Register(uint8 u8Data)
+     80          {
+   \                     GPIO_I2C_Write_Register: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     81              uint8 u8BitTmp;
+     82              uint8 u8Loopi;
+     83              
+     84              for (u8Loopi=0; u8Loopi<8; u8Loopi++)
+   \   00000004   0x2600             MOVS     R6,#+0
+   \   00000006   0xE017             B.N      ??GPIO_I2C_Write_Register_0
+     85              {
+     86                      u8BitTmp = (uint8)((u8Data >> (7-u8Loopi)) & 0x01); 
+   \                     ??GPIO_I2C_Write_Register_1: (+1)
+   \   00000008   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000000A   0xF1D6 0x0007      RSBS     R0,R6,#+7
+   \   0000000E   0x0021             MOVS     R1,R4
+   \   00000010   0x4101             ASRS     R1,R1,R0
+   \   00000012   0xF011 0x0501      ANDS     R5,R1,#0x1
+     87                      SCL_L;
+   \   00000016   0x2200             MOVS     R2,#+0
+   \   00000018   0x210B             MOVS     R1,#+11
+   \   0000001A   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000001C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     88                      SET_SDA(u8BitTmp);
+   \   00000020   0x002A             MOVS     R2,R5
+   \   00000022   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000024   0x210C             MOVS     R1,#+12
+   \   00000026   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000028   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     89                      SCL_H;
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x210B             MOVS     R1,#+11
+   \   00000030   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000032   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     90              }
+   \   00000036   0x1C76             ADDS     R6,R6,#+1
+   \                     ??GPIO_I2C_Write_Register_0: (+1)
+   \   00000038   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000003A   0x2E08             CMP      R6,#+8
+   \   0000003C   0xDBE4             BLT.N    ??GPIO_I2C_Write_Register_1
+     91          
+     92              SCL_L;  //第8字节时钟下降沿
+   \   0000003E   0x2200             MOVS     R2,#+0
+   \   00000040   0x210B             MOVS     R1,#+11
+   \   00000042   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000044   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     93              SET_SDA(HIGH); //释放总线以让从机可以应答
+   \   00000048   0x2201             MOVS     R2,#+1
+   \   0000004A   0x210C             MOVS     R1,#+12
+   \   0000004C   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000004E   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     94          }
+   \   00000052   0xBD70             POP      {R4-R6,PC}       ;; return
+     95          
+     96          /*******************************************************
+     97          	函数名: GPIO_I2C_Read_Register                                                   
+     98          	功  能: 模拟读寄存器                                                
+     99          	参  数: 无                                                                      
+    100          	返  回: u8Data：接收的数据    
+    101              备  注：交界处也要设置   	
+    102          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    103          static uint8 GPIO_I2C_Read_Register()
+    104          {
+   \                     GPIO_I2C_Read_Register: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    105              uint8 u8Data = 0;
+   \   00000002   0x2400             MOVS     R4,#+0
+    106              uint8 u8BitTmp;
+    107              uint8 u8Loopi;
+    108              
+    109              SCL_L;  //交界处
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x210B             MOVS     R1,#+11
+   \   00000008   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000000A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    110              SET_SDA(HIGH); //释放总线以让从机可以发送
+   \   0000000E   0x2201             MOVS     R2,#+1
+   \   00000010   0x210C             MOVS     R1,#+12
+   \   00000012   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000014   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    111          
+    112              for (u8Loopi=0; u8Loopi<8; u8Loopi++)
+   \   00000018   0x2500             MOVS     R5,#+0
+   \   0000001A   0xE010             B.N      ??GPIO_I2C_Read_Register_0
+    113              {
+    114                      SCL_H;
+   \                     ??GPIO_I2C_Read_Register_1: (+1)
+   \   0000001C   0x2201             MOVS     R2,#+1
+   \   0000001E   0x210B             MOVS     R1,#+11
+   \   00000020   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000022   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    115                      
+    116                      u8BitTmp = GET_SDA();
+   \   00000026   0x210C             MOVS     R1,#+12
+   \   00000028   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000002A   0x.... 0x....      BL       LPLD_GPIO_Input_b
+    117                      u8Data = (uint8)((u8Data<<1) | u8BitTmp);
+   \   0000002E   0xEA50 0x0444      ORRS     R4,R0,R4, LSL #+1
+    118                      SCL_L;		
+   \   00000032   0x2200             MOVS     R2,#+0
+   \   00000034   0x210B             MOVS     R1,#+11
+   \   00000036   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000038   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    119              }	
+   \   0000003C   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??GPIO_I2C_Read_Register_0: (+1)
+   \   0000003E   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000040   0x2D08             CMP      R5,#+8
+   \   00000042   0xDBEB             BLT.N    ??GPIO_I2C_Read_Register_1
+    120              
+    121              return u8Data;
+   \   00000044   0x0020             MOVS     R0,R4
+   \   00000046   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000048   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    122          }
+    123          
+    124          /*******************************************************
+    125          	函数名: GPIO_I2C_Response                                                   
+    126          	功  能: 回复应答位信号                                                
+    127          	参  数: u8AckState：应答位                                                                      
+    128          	返  回: 无   
+    129              备  注：交界处也设置了   	
+    130          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    131          static void GPIO_I2C_Response(uint8 u8AckState) //ACK_ON开启应答  ACK_OFF不应答
+    132          {
+   \                     GPIO_I2C_Response: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    133              SCL_L; //交界处
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x210B             MOVS     R1,#+11
+   \   00000008   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000000A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    134              SET_SDA(u8AckState);
+   \   0000000E   0x0022             MOVS     R2,R4
+   \   00000010   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000012   0x210C             MOVS     R1,#+12
+   \   00000014   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000016   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    135              SCL_H;
+   \   0000001A   0x2201             MOVS     R2,#+1
+   \   0000001C   0x210B             MOVS     R1,#+11
+   \   0000001E   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000020   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    136              SCL_L;
+   \   00000024   0x2200             MOVS     R2,#+0
+   \   00000026   0x210B             MOVS     R1,#+11
+   \   00000028   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000002A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    137          }
+   \   0000002E   0xBD10             POP      {R4,PC}          ;; return
+    138          
+    139          /*******************************************************
+    140          	函数名: GPIO_I2C_Wait_Ack                                                   
+    141          	功  能: 等待应答信号                                                
+    142          	参  数: 无                                                                      
+    143          	返  回: u8AckRec：收到应答位的电平    	
+    144          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    145          static uint8 GPIO_I2C_Wait_Ack() 
+    146          {
+   \                     GPIO_I2C_Wait_Ack: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    147              uint8 u8AckRec;
+    148              uint32 u32Loopi = 0;
+   \   00000002   0x2500             MOVS     R5,#+0
+    149              
+    150              SCL_H; //写“寄存器”操作时已经拉低
+   \   00000004   0x2201             MOVS     R2,#+1
+   \   00000006   0x210B             MOVS     R1,#+11
+   \   00000008   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000000A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    151              u8AckRec = GET_SDA();
+   \   0000000E   0x210C             MOVS     R1,#+12
+   \   00000010   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   00000012   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000016   0x0004             MOVS     R4,R0
+   \   00000018   0xE000             B.N      ??GPIO_I2C_Wait_Ack_0
+    152              
+    153              while ((u8AckRec == 1) && (u32Loopi<3))
+    154              {
+    155                      u32Loopi++;
+   \                     ??GPIO_I2C_Wait_Ack_1: (+1)
+   \   0000001A   0x1C6D             ADDS     R5,R5,#+1
+    156              }
+   \                     ??GPIO_I2C_Wait_Ack_0: (+1)
+   \   0000001C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001E   0x2C01             CMP      R4,#+1
+   \   00000020   0xD101             BNE.N    ??GPIO_I2C_Wait_Ack_2
+   \   00000022   0x2D03             CMP      R5,#+3
+   \   00000024   0xD3F9             BCC.N    ??GPIO_I2C_Wait_Ack_1
+    157              
+    158              SCL_L;
+   \                     ??GPIO_I2C_Wait_Ack_2: (+1)
+   \   00000026   0x2200             MOVS     R2,#+0
+   \   00000028   0x210B             MOVS     R1,#+11
+   \   0000002A   0x....             LDR.N    R0,??DataTable7  ;; 0x400ff100
+   \   0000002C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    159              
+    160              return u8AckRec;
+   \   00000030   0x0020             MOVS     R0,R4
+   \   00000032   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000034   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    161          }
+    162          
+    163          /*******************************************************
+    164          	函数名: GPIO_I2C_Write_1                                                   
+    165          	功  能: 向总线设备发出1字节                                                
+    166          	参  数: DeviceAddr：设备地址
+    167                      AccessAddr：访问地址
+    168                      Data：发送的数据
+    169          	返  回:  	
+    170          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    171          void GPIO_I2C_Write_1(uint8 DeviceAddr, uint8 AccessAddr, uint8 Data)
+    172          {
+   \                     GPIO_I2C_Write_1: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    173              GPIO_I2C_Start(); //开始信号
+   \   00000008   0x.... 0x....      BL       GPIO_I2C_Start
+    174              GPIO_I2C_Write_Register((uint8)(DeviceAddr & 0xfe)); //设备地址
+   \   0000000C   0xF014 0x00FE      ANDS     R0,R4,#0xFE
+   \   00000010   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    175              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000014   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    176              GPIO_I2C_Write_Register(AccessAddr); //访问地址
+   \   00000018   0x0028             MOVS     R0,R5
+   \   0000001A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001C   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    177              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000020   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    178              GPIO_I2C_Write_Register(Data); //写数据
+   \   00000024   0x0030             MOVS     R0,R6
+   \   00000026   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000028   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    179              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000002C   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    180              GPIO_I2C_Stop();		
+   \   00000030   0x.... 0x....      BL       GPIO_I2C_Stop
+    181          }
+   \   00000034   0xBD70             POP      {R4-R6,PC}       ;; return
+    182          
+    183          /*******************************************************
+    184          	函数名: GPIO_I2C_Read_1                                                   
+    185          	功  能: 从总线设备读取1字节                                                
+    186          	参  数: DeviceAddr：设备地址
+    187                      AccessAddr：访问地址
+    188                      pData：待接收数据缓存地址
+    189          	返  回:    	
+    190          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    191          uint8 GPIO_I2C_Read_1(uint8 DeviceAddr, uint8 AccessAddr, uint8 *pData)
+    192          {
+   \                     GPIO_I2C_Read_1: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    193              uint8 u8Temp;
+    194              
+    195              GPIO_I2C_Start(); //开始信号
+   \   00000008   0x.... 0x....      BL       GPIO_I2C_Start
+    196              GPIO_I2C_Write_Register((uint8)(DeviceAddr & 0xfe)); //设备地址，写操作
+   \   0000000C   0xF014 0x00FE      ANDS     R0,R4,#0xFE
+   \   00000010   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    197              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000014   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    198              GPIO_I2C_Write_Register(AccessAddr); //访问地址
+   \   00000018   0x0028             MOVS     R0,R5
+   \   0000001A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001C   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    199              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000020   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    200          
+    201              GPIO_I2C_Restart(); //重新开始信号
+   \   00000024   0x.... 0x....      BL       GPIO_I2C_Restart
+    202              GPIO_I2C_Write_Register((uint8)(DeviceAddr | 0x01)); // 写设备地址，为读模式，通知从机改为发送数据
+   \   00000028   0xF054 0x0001      ORRS     R0,R4,#0x1
+   \   0000002C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000002E   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    203              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000032   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    204          
+    205              u8Temp = GPIO_I2C_Read_Register(); //读取数据
+   \   00000036   0x.... 0x....      BL       GPIO_I2C_Read_Register
+   \   0000003A   0x0004             MOVS     R4,R0
+    206              GPIO_I2C_Response(ACK_OFF); //非应答信号
+   \   0000003C   0x2001             MOVS     R0,#+1
+   \   0000003E   0x.... 0x....      BL       GPIO_I2C_Response
+    207              GPIO_I2C_Stop();
+   \   00000042   0x.... 0x....      BL       GPIO_I2C_Stop
+    208              
+    209              if (pData != NULL)
+   \   00000046   0x2E00             CMP      R6,#+0
+   \   00000048   0xD000             BEQ.N    ??GPIO_I2C_Read_1_0
+    210              {
+    211                  *pData = u8Temp;
+   \   0000004A   0x7034             STRB     R4,[R6, #+0]
+    212              }
+    213              
+    214              return u8Temp;
+   \                     ??GPIO_I2C_Read_1_0: (+1)
+   \   0000004C   0x0020             MOVS     R0,R4
+   \   0000004E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000050   0xBD70             POP      {R4-R6,PC}       ;; return
+    215          }
+    216          
+    217          /*******************************************************
+    218          	函数名: GPIO_I2C_Write_2                                                  
+    219          	功  能: 向总线设备发出2字节                                                
+    220          	参  数: DeviceAddr：设备地址
+    221                          AccessAddr：访问地址
+    222                          Data：发送的数据
+    223          	返  回:     	
+    224          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    225          void GPIO_I2C_Write_2(uint8 DeviceAddr, uint8 AccessAddr, uint16 Data)
+    226          {       
+   \                     GPIO_I2C_Write_2: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+    227              uint8 msdata = 0;
+   \   00000006   0x2600             MOVS     R6,#+0
+    228              uint8 lsdata = 0;
+   \   00000008   0x2700             MOVS     R7,#+0
+    229              msdata = (uint8)((Data & 0xff00)>>8);
+   \   0000000A   0x0010             MOVS     R0,R2
+   \   0000000C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000E   0x0A06             LSRS     R6,R0,#+8
+    230              lsdata = (uint8)(Data & 0xff);
+   \   00000010   0x0017             MOVS     R7,R2
+    231                   
+    232              GPIO_I2C_Start(); //开始信号
+   \   00000012   0x.... 0x....      BL       GPIO_I2C_Start
+    233              GPIO_I2C_Write_Register((uint8)(DeviceAddr & 0xfe)); //设备地址
+   \   00000016   0xF014 0x00FE      ANDS     R0,R4,#0xFE
+   \   0000001A   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    234              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000001E   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    235              GPIO_I2C_Write_Register(AccessAddr); //访问地址
+   \   00000022   0x0028             MOVS     R0,R5
+   \   00000024   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000026   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    236              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000002A   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    237              
+    238              GPIO_I2C_Write_Register(msdata); //写高八位数据
+   \   0000002E   0x0030             MOVS     R0,R6
+   \   00000030   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000032   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    239              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000036   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    240              GPIO_I2C_Write_Register(lsdata); //写低八位数据
+   \   0000003A   0x0038             MOVS     R0,R7
+   \   0000003C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000003E   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    241              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000042   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    242              
+    243              GPIO_I2C_Stop();		
+   \   00000046   0x.... 0x....      BL       GPIO_I2C_Stop
+    244          }
+   \   0000004A   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    245          
+    246          /*******************************************************
+    247          	函数名: GPIO_I2C_Read_2                                                   
+    248          	功  能: 从总线设备读取2字节                                                
+    249          	参  数: DeviceAddr：设备地址
+    250                      AccessAddr：访问地址
+    251                      pData：待接收数据缓存地址
+    252          	返  回: 无     	
+    253          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    254          void GPIO_I2C_Read_2(uint8 DeviceAddr, uint8 AccessAddr, uint16 *pData)
+    255          {
+   \                     GPIO_I2C_Read_2: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+    256              uint16 msdata = 0;
+   \   0000000A   0x2700             MOVS     R7,#+0
+    257              uint16 lsdata = 0;
+   \   0000000C   0xF05F 0x0800      MOVS     R8,#+0
+    258              
+    259              GPIO_I2C_Start(); //开始信号
+   \   00000010   0x.... 0x....      BL       GPIO_I2C_Start
+    260              GPIO_I2C_Write_Register((uint8)(DeviceAddr & 0xfe)); //设备地址，写操作
+   \   00000014   0xF014 0x00FE      ANDS     R0,R4,#0xFE
+   \   00000018   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    261              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000001C   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    262              GPIO_I2C_Write_Register(AccessAddr); //访问地址
+   \   00000020   0x0028             MOVS     R0,R5
+   \   00000022   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000024   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    263              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000028   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    264          
+    265              GPIO_I2C_Restart(); //重新开始信号
+   \   0000002C   0x.... 0x....      BL       GPIO_I2C_Restart
+    266              GPIO_I2C_Write_Register((uint8)(DeviceAddr | 0x01)); // 写设备地址，为读模式，通知从机改为发送数据
+   \   00000030   0xF054 0x0001      ORRS     R0,R4,#0x1
+   \   00000034   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000036   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    267              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000003A   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    268              
+    269              msdata = GPIO_I2C_Read_Register(); //读取高八位数据
+   \   0000003E   0x.... 0x....      BL       GPIO_I2C_Read_Register
+   \   00000042   0x0007             MOVS     R7,R0
+    270              GPIO_I2C_Response(ACK_ON); //应答信号
+   \   00000044   0x2000             MOVS     R0,#+0
+   \   00000046   0x.... 0x....      BL       GPIO_I2C_Response
+    271              lsdata = GPIO_I2C_Read_Register(); //读取低八位数据
+   \   0000004A   0x.... 0x....      BL       GPIO_I2C_Read_Register
+   \   0000004E   0x4680             MOV      R8,R0
+    272              GPIO_I2C_Response(ACK_OFF); //非应答信号
+   \   00000050   0x2001             MOVS     R0,#+1
+   \   00000052   0x.... 0x....      BL       GPIO_I2C_Response
+    273              
+    274              GPIO_I2C_Stop();
+   \   00000056   0x.... 0x....      BL       GPIO_I2C_Stop
+    275              
+    276              *pData = ( (msdata<<8) | lsdata );      
+   \   0000005A   0xEA58 0x2007      ORRS     R0,R8,R7, LSL #+8
+   \   0000005E   0x8030             STRH     R0,[R6, #+0]
+    277          }
+   \   00000060   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    278          
+    279          /*******************************************************
+    280          	函数名: GPIO_I2C_Read_N                                                  
+    281          	功  能: 从总线设备读取N字节                                                
+    282          	参  数: DeviceAddr：设备地址
+    283                      AccessAddr：访问地址
+    284                      pData：待接收数据缓存地址
+    285          	返  回: 无     	
+    286          *********************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    287          void GPIO_I2C_Read_N(uint8 DeviceAddr, uint8 AccessAddr, uint8 *pData, uint16 lenth)
+    288          {
+   \                     GPIO_I2C_Read_N: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+   \   0000000A   0x001F             MOVS     R7,R3
+    289              uint16 msdata = 0;
+   \   0000000C   0x2000             MOVS     R0,#+0
+    290              uint16 lsdata = 0;
+   \   0000000E   0x2000             MOVS     R0,#+0
+    291              int16 i = 0;
+   \   00000010   0xF05F 0x0800      MOVS     R8,#+0
+    292              
+    293              GPIO_I2C_Start(); //开始信号
+   \   00000014   0x.... 0x....      BL       GPIO_I2C_Start
+    294              GPIO_I2C_Write_Register((uint8)(DeviceAddr & 0xfe)); //设备地址，写操作
+   \   00000018   0xF014 0x00FE      ANDS     R0,R4,#0xFE
+   \   0000001C   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    295              GPIO_I2C_Wait_Ack(); //等待回应
+   \   00000020   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    296              GPIO_I2C_Write_Register(AccessAddr); //访问地址
+   \   00000024   0x0028             MOVS     R0,R5
+   \   00000026   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000028   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    297              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000002C   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    298          
+    299              GPIO_I2C_Restart(); //重新开始信号
+   \   00000030   0x.... 0x....      BL       GPIO_I2C_Restart
+    300              GPIO_I2C_Write_Register((uint8)(DeviceAddr | 0x01)); // 写设备地址，为读模式，通知从机改为发送数据
+   \   00000034   0xF054 0x0001      ORRS     R0,R4,#0x1
+   \   00000038   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000003A   0x.... 0x....      BL       GPIO_I2C_Write_Register
+    301              GPIO_I2C_Wait_Ack(); //等待回应
+   \   0000003E   0x.... 0x....      BL       GPIO_I2C_Wait_Ack
+    302              
+    303              for(i=0;i<lenth-1;i++)
+   \   00000042   0xF05F 0x0800      MOVS     R8,#+0
+   \   00000046   0xE00A             B.N      ??GPIO_I2C_Read_N_0
+    304              {
+    305                      pData[i] = GPIO_I2C_Read_Register(); //读取高八位数据
+   \                     ??GPIO_I2C_Read_N_1: (+1)
+   \   00000048   0x.... 0x....      BL       GPIO_I2C_Read_Register
+   \   0000004C   0xFA0F 0xF888      SXTH     R8,R8            ;; SignExt  R8,R8,#+16,#+16
+   \   00000050   0xF806 0x0008      STRB     R0,[R6, R8]
+    306                      GPIO_I2C_Response(ACK_ON); //应答信号
+   \   00000054   0x2000             MOVS     R0,#+0
+   \   00000056   0x.... 0x....      BL       GPIO_I2C_Response
+    307              }
+   \   0000005A   0xF118 0x0801      ADDS     R8,R8,#+1
+   \                     ??GPIO_I2C_Read_N_0: (+1)
+   \   0000005E   0xFA0F 0xF888      SXTH     R8,R8            ;; SignExt  R8,R8,#+16,#+16
+   \   00000062   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   00000064   0x1E78             SUBS     R0,R7,#+1
+   \   00000066   0x4580             CMP      R8,R0
+   \   00000068   0xDBEE             BLT.N    ??GPIO_I2C_Read_N_1
+    308              pData[i] = GPIO_I2C_Read_Register(); //读取低八位数据
+   \   0000006A   0x.... 0x....      BL       GPIO_I2C_Read_Register
+   \   0000006E   0xFA0F 0xF888      SXTH     R8,R8            ;; SignExt  R8,R8,#+16,#+16
+   \   00000072   0xF806 0x0008      STRB     R0,[R6, R8]
+    309              GPIO_I2C_Response(ACK_OFF); //非应答信号
+   \   00000076   0x2001             MOVS     R0,#+1
+   \   00000078   0x.... 0x....      BL       GPIO_I2C_Response
+    310              
+    311              GPIO_I2C_Stop();
+   \   0000007C   0x.... 0x....      BL       GPIO_I2C_Stop
+    312              
+    313              //*pData = ( (msdata<<8) | lsdata );      
+    314          }
+   \   00000080   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    315          
+
+   \                                 In section .text, align 2, keep-with-next
+    316          void GPIO_I2C_Delay(uint32 u32DelayCnt)
+    317          {
+   \                     GPIO_I2C_Delay: (+1)
+   \   00000000   0xE000             B.N      ??GPIO_I2C_Delay_0
+    318              while(u32DelayCnt)
+    319                u32DelayCnt--;
+   \                     ??GPIO_I2C_Delay_1: (+1)
+   \   00000002   0x1E40             SUBS     R0,R0,#+1
+   \                     ??GPIO_I2C_Delay_0: (+1)
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD1FC             BNE.N    ??GPIO_I2C_Delay_1
+    320          }    
+   \   00000008   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x........         DC32     `GPIO_I2C_Init::gpio_SDA_init_struct`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0x........         DC32     `GPIO_I2C_Init::gpio_SCL_init_struct`
+    321              
+    322              
+    323              
+    324          
+    325          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   GPIO_I2C_Delay
+      24   GPIO_I2C_Init
+         8   -> LPLD_GPIO_Init
+        24   -> __aeabi_memcpy4
+      16   GPIO_I2C_Read_1
+        16   -> GPIO_I2C_Read_Register
+        16   -> GPIO_I2C_Response
+        16   -> GPIO_I2C_Restart
+        16   -> GPIO_I2C_Start
+        16   -> GPIO_I2C_Stop
+        16   -> GPIO_I2C_Wait_Ack
+        16   -> GPIO_I2C_Write_Register
+      24   GPIO_I2C_Read_2
+        24   -> GPIO_I2C_Read_Register
+        24   -> GPIO_I2C_Response
+        24   -> GPIO_I2C_Restart
+        24   -> GPIO_I2C_Start
+        24   -> GPIO_I2C_Stop
+        24   -> GPIO_I2C_Wait_Ack
+        24   -> GPIO_I2C_Write_Register
+      24   GPIO_I2C_Read_N
+        24   -> GPIO_I2C_Read_Register
+        24   -> GPIO_I2C_Response
+        24   -> GPIO_I2C_Restart
+        24   -> GPIO_I2C_Start
+        24   -> GPIO_I2C_Stop
+        24   -> GPIO_I2C_Wait_Ack
+        24   -> GPIO_I2C_Write_Register
+      16   GPIO_I2C_Read_Register
+        16   -> LPLD_GPIO_Input_b
+        16   -> LPLD_GPIO_Output_b
+       8   GPIO_I2C_Response
+         8   -> LPLD_GPIO_Output_b
+       8   GPIO_I2C_Restart
+         8   -> LPLD_GPIO_Output_b
+       8   GPIO_I2C_Start
+         8   -> LPLD_GPIO_Output_b
+       8   GPIO_I2C_Stop
+         8   -> LPLD_GPIO_Output_b
+      16   GPIO_I2C_Wait_Ack
+        16   -> LPLD_GPIO_Input_b
+        16   -> LPLD_GPIO_Output_b
+      16   GPIO_I2C_Write_1
+        16   -> GPIO_I2C_Start
+        16   -> GPIO_I2C_Stop
+        16   -> GPIO_I2C_Wait_Ack
+        16   -> GPIO_I2C_Write_Register
+      24   GPIO_I2C_Write_2
+        24   -> GPIO_I2C_Start
+        24   -> GPIO_I2C_Stop
+        24   -> GPIO_I2C_Wait_Ack
+        24   -> GPIO_I2C_Write_Register
+      16   GPIO_I2C_Write_Register
+        16   -> LPLD_GPIO_Output_b
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+      10  GPIO_I2C_Delay
+     104  GPIO_I2C_Init
+      82  GPIO_I2C_Read_1
+     100  GPIO_I2C_Read_2
+     132  GPIO_I2C_Read_N
+      74  GPIO_I2C_Read_Register
+      48  GPIO_I2C_Response
+      34  GPIO_I2C_Restart
+      34  GPIO_I2C_Start
+      34  GPIO_I2C_Stop
+      54  GPIO_I2C_Wait_Ack
+      54  GPIO_I2C_Write_1
+      76  GPIO_I2C_Write_2
+      84  GPIO_I2C_Write_Register
+      20  gpio_SCL_init_struct
+      20  gpio_SDA_init_struct
+
+ 
+  40 bytes in section .bss
+ 932 bytes in section .text
+ 
+ 932 bytes of CODE memory
+  40 bytes of DATA memory
+
+Errors: none
+Warnings: 2

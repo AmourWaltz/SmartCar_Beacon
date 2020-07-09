@@ -1,0 +1,17 @@
+"--endian=little" 
+
+"--cpu=Cortex-M4" 
+
+"--fpu=None" 
+
+"-p" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CONFIG\debugger\NXP\MK60DN512Zxxx10.ddf" 
+
+"--semihosting" 
+
+"--device=MK60DN512Zxxx10" 
+
+
+
+

@@ -1,0 +1,1999 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       27/Jul/2018  20:43:47
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\system\general.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\system\general.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\general.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\general.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\general.c
+      1          #include "include.h"
+      2          
+      3          //限幅函数
+
+   \                                 In section .text, align 2, keep-with-next
+      4          float Limiter(float value, float min, float max)
+      5          {
+   \                     Limiter: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0003             MOVS     R3,R0
+   \   00000004   0x000C             MOVS     R4,R1
+   \   00000006   0x0010             MOVS     R0,R2
+      6          	if(value > max)
+   \   00000008   0x0019             MOVS     R1,R3
+   \   0000000A   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000000E   0xD201             BCS.N    ??Limiter_0
+      7          	{
+      8          		value = max;
+   \   00000010   0x0003             MOVS     R3,R0
+   \   00000012   0xE006             B.N      ??Limiter_1
+      9          	}
+     10          	else if(value < min)
+   \                     ??Limiter_0: (+1)
+   \   00000014   0x0018             MOVS     R0,R3
+   \   00000016   0x0021             MOVS     R1,R4
+   \   00000018   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000001C   0xD201             BCS.N    ??Limiter_2
+     11          	{
+     12          		value = min;
+   \   0000001E   0x0023             MOVS     R3,R4
+   \   00000020   0xE7FF             B.N      ??Limiter_1
+     13          	}
+     14          	else
+     15          	{
+     16          		value=value;
+     17          	}
+     18          	return value;
+   \                     ??Limiter_2: (+1)
+   \                     ??Limiter_1: (+1)
+   \   00000022   0x0018             MOVS     R0,R3
+   \   00000024   0xBD10             POP      {R4,PC}          ;; return
+     19          }
+     20          
+
+   \                                 In section .text, align 2, keep-with-next
+     21          void least_spuare(int *array, int lenth, float *k, float * b, float *r)		//最小二乘法拟合
+     22          {
+   \                     least_spuare: (+1)
+   \   00000000   0xE92D 0x4FFC      PUSH     {R2-R11,LR}
+   \   00000004   0xB083             SUB      SP,SP,#+12
+   \   00000006   0x000C             MOVS     R4,R1
+     23              long sum_xy, sum_x, sum_y, sum_x2, sumx_2, sum_y2, sumy_2;
+     24              int i, x, y;
+     25              float temp_k;
+     26              float devider;
+     27              if(lenth<0)
+   \   00000008   0x2C00             CMP      R4,#+0
+   \   0000000A   0xD500             BPL.N    ??least_spuare_0
+     28              {
+     29                  lenth = 0;
+   \   0000000C   0x2400             MOVS     R4,#+0
+     30              }
+     31              for(i=0,sum_xy=0, sum_x=0, sum_y=0, sum_x2=0, sumx_2=0, sum_y2=0, sumy_2=0; i<lenth; i++)
+   \                     ??least_spuare_0: (+1)
+   \   0000000E   0x2100             MOVS     R1,#+0
+   \   00000010   0xF05F 0x0800      MOVS     R8,#+0
+   \   00000014   0xF05F 0x0B00      MOVS     R11,#+0
+   \   00000018   0xF05F 0x0A00      MOVS     R10,#+0
+   \   0000001C   0x2500             MOVS     R5,#+0
+   \   0000001E   0x2200             MOVS     R2,#+0
+   \   00000020   0x9201             STR      R2,[SP, #+4]
+   \   00000022   0xF05F 0x0900      MOVS     R9,#+0
+   \   00000026   0x2200             MOVS     R2,#+0
+   \   00000028   0x9202             STR      R2,[SP, #+8]
+   \   0000002A   0xE008             B.N      ??least_spuare_1
+     32              {
+     33                  y = array[i];
+   \                     ??least_spuare_2: (+1)
+   \   0000002C   0xF850 0x2021      LDR      R2,[R0, R1, LSL #+2]
+     34                  x = i;
+     35                  sum_xy += x*y;
+   \   00000030   0xFB02 0x8801      MLA      R8,R2,R1,R8
+     36                  sum_y += y;
+   \   00000034   0xEB12 0x0A0A      ADDS     R10,R2,R10
+     37                  //sum_x += x;
+     38                  sum_y2 += y*y;
+   \   00000038   0xFB02 0x9902      MLA      R9,R2,R2,R9
+     39              }
+   \   0000003C   0x1C49             ADDS     R1,R1,#+1
+   \                     ??least_spuare_1: (+1)
+   \   0000003E   0x42A1             CMP      R1,R4
+   \   00000040   0xDBF4             BLT.N    ??least_spuare_2
+     40              sum_x = lenth*(lenth-1)/2;
+   \   00000042   0x1E60             SUBS     R0,R4,#+1
+   \   00000044   0xFB00 0xF004      MUL      R0,R0,R4
+   \   00000048   0x2102             MOVS     R1,#+2
+   \   0000004A   0xFB90 0xFBF1      SDIV     R11,R0,R1
+     41              sumx_2 = sum_x*sum_x;
+   \   0000004E   0xFB0B 0xF00B      MUL      R0,R11,R11
+   \   00000052   0x9001             STR      R0,[SP, #+4]
+     42              sum_x2 = lenth*(lenth-1)*(2*lenth-1)/6;
+   \   00000054   0x1E60             SUBS     R0,R4,#+1
+   \   00000056   0xFB00 0xF004      MUL      R0,R0,R4
+   \   0000005A   0x0061             LSLS     R1,R4,#+1
+   \   0000005C   0x1E49             SUBS     R1,R1,#+1
+   \   0000005E   0x4348             MULS     R0,R1,R0
+   \   00000060   0x2106             MOVS     R1,#+6
+   \   00000062   0xFB90 0xF5F1      SDIV     R5,R0,R1
+     43              sumy_2 = sum_y*sum_y;
+   \   00000066   0xFB0A 0xF00A      MUL      R0,R10,R10
+   \   0000006A   0x9002             STR      R0,[SP, #+8]
+     44              if((lenth*sum_x2-sumx_2)!=0)
+   \   0000006C   0xFB05 0xF004      MUL      R0,R5,R4
+   \   00000070   0x9901             LDR      R1,[SP, #+4]
+   \   00000072   0x1A40             SUBS     R0,R0,R1
+   \   00000074   0x2800             CMP      R0,#+0
+   \   00000076   0xD02A             BEQ.N    ??least_spuare_3
+     45              {
+     46                  devider = (lenth*sum_x2-sumx_2);
+   \   00000078   0xFB05 0xF004      MUL      R0,R5,R4
+   \   0000007C   0x9901             LDR      R1,[SP, #+4]
+   \   0000007E   0x1A40             SUBS     R0,R0,R1
+   \   00000080   0x.... 0x....      BL       __aeabi_i2f
+   \   00000084   0x0007             MOVS     R7,R0
+     47                  temp_k = (lenth*sum_xy-sum_x*sum_y)/(float)(lenth*sum_x2-sumx_2);
+   \   00000086   0xFB08 0xF004      MUL      R0,R8,R4
+   \   0000008A   0xFB0A 0x001B      MLS      R0,R10,R11,R0
+   \   0000008E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000092   0x0006             MOVS     R6,R0
+   \   00000094   0xFB05 0xF004      MUL      R0,R5,R4
+   \   00000098   0x9901             LDR      R1,[SP, #+4]
+   \   0000009A   0x1A40             SUBS     R0,R0,R1
+   \   0000009C   0x.... 0x....      BL       __aeabi_i2f
+   \   000000A0   0x0001             MOVS     R1,R0
+   \   000000A2   0x0030             MOVS     R0,R6
+   \   000000A4   0x.... 0x....      BL       __aeabi_fdiv
+   \   000000A8   0x0006             MOVS     R6,R0
+     48                  if(devider != 0)
+   \   000000AA   0x0038             MOVS     R0,R7
+   \   000000AC   0x2100             MOVS     R1,#+0
+   \   000000AE   0x.... 0x....      BL       __aeabi_cfcmpeq
+   \   000000B2   0xD00A             BEQ.N    ??least_spuare_4
+     49                  {
+     50                      temp_k = (lenth*sum_xy-sum_x*sum_y)/devider;
+   \   000000B4   0xFB08 0xF004      MUL      R0,R8,R4
+   \   000000B8   0xFB0A 0x001B      MLS      R0,R10,R11,R0
+   \   000000BC   0x.... 0x....      BL       __aeabi_i2f
+   \   000000C0   0x0039             MOVS     R1,R7
+   \   000000C2   0x.... 0x....      BL       __aeabi_fdiv
+   \   000000C6   0x0006             MOVS     R6,R0
+   \   000000C8   0xE002             B.N      ??least_spuare_5
+     51                  }
+     52                  else
+     53                  {
+     54                      temp_k = 0;
+   \                     ??least_spuare_4: (+1)
+   \   000000CA   0x2600             MOVS     R6,#+0
+   \   000000CC   0xE000             B.N      ??least_spuare_5
+     55                  }
+     56              }
+     57              else
+     58              {
+     59                  temp_k=0;
+   \                     ??least_spuare_3: (+1)
+   \   000000CE   0x2600             MOVS     R6,#+0
+     60              }
+     61              if(b != NULL)
+   \                     ??least_spuare_5: (+1)
+   \   000000D0   0x9804             LDR      R0,[SP, #+16]
+   \   000000D2   0x2800             CMP      R0,#+0
+   \   000000D4   0xD017             BEQ.N    ??least_spuare_6
+     62              {
+     63                  if(lenth != 0)
+   \   000000D6   0x2C00             CMP      R4,#+0
+   \   000000D8   0xD012             BEQ.N    ??least_spuare_7
+     64                  {
+     65                      *b = sum_y/lenth - (temp_k)*(sum_x/lenth);
+   \   000000DA   0xFB9A 0xF0F4      SDIV     R0,R10,R4
+   \   000000DE   0x.... 0x....      BL       __aeabi_i2f
+   \   000000E2   0x0007             MOVS     R7,R0
+   \   000000E4   0xFB9B 0xF0F4      SDIV     R0,R11,R4
+   \   000000E8   0x.... 0x....      BL       __aeabi_i2f
+   \   000000EC   0x0031             MOVS     R1,R6
+   \   000000EE   0x.... 0x....      BL       __aeabi_fmul
+   \   000000F2   0x0001             MOVS     R1,R0
+   \   000000F4   0x0038             MOVS     R0,R7
+   \   000000F6   0x.... 0x....      BL       __aeabi_fsub
+   \   000000FA   0x9904             LDR      R1,[SP, #+16]
+   \   000000FC   0x6008             STR      R0,[R1, #+0]
+   \   000000FE   0xE002             B.N      ??least_spuare_6
+     66                  }
+     67                  else
+     68                  {
+     69                      *b = 0;
+   \                     ??least_spuare_7: (+1)
+   \   00000100   0x2000             MOVS     R0,#+0
+   \   00000102   0x9904             LDR      R1,[SP, #+16]
+   \   00000104   0x6008             STR      R0,[R1, #+0]
+   \                     ??least_spuare_6: (+1)
+   \   00000106   0xF8DD 0x8038      LDR      R8,[SP, #+56]
+     70                  }
+     71              }
+     72              if(r != NULL)
+   \   0000010A   0xF1B8 0x0F00      CMP      R8,#+0
+   \   0000010E   0xD04B             BEQ.N    ??least_spuare_8
+     73              {
+     74                  devider = (lenth*sum_y2-sumy_2);
+   \   00000110   0xFB09 0xF004      MUL      R0,R9,R4
+   \   00000114   0x9902             LDR      R1,[SP, #+8]
+   \   00000116   0x1A40             SUBS     R0,R0,R1
+   \   00000118   0x.... 0x....      BL       __aeabi_i2f
+   \   0000011C   0x0007             MOVS     R7,R0
+     75                  *r = (temp_k)*sqrt((lenth*sum_x2-sumx_2)/(float)(lenth*sum_y2-sumy_2));
+   \   0000011E   0x0030             MOVS     R0,R6
+   \   00000120   0x.... 0x....      BL       __aeabi_f2d
+   \   00000124   0x4682             MOV      R10,R0
+   \   00000126   0x468B             MOV      R11,R1
+   \   00000128   0xFB05 0xF004      MUL      R0,R5,R4
+   \   0000012C   0x9901             LDR      R1,[SP, #+4]
+   \   0000012E   0x1A40             SUBS     R0,R0,R1
+   \   00000130   0x.... 0x....      BL       __aeabi_i2f
+   \   00000134   0x9000             STR      R0,[SP, #+0]
+   \   00000136   0xFB09 0xF004      MUL      R0,R9,R4
+   \   0000013A   0x9902             LDR      R1,[SP, #+8]
+   \   0000013C   0x1A40             SUBS     R0,R0,R1
+   \   0000013E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000142   0x0001             MOVS     R1,R0
+   \   00000144   0x9800             LDR      R0,[SP, #+0]
+   \   00000146   0x.... 0x....      BL       __aeabi_fdiv
+   \   0000014A   0x.... 0x....      BL       __aeabi_f2d
+   \   0000014E   0x.... 0x....      BL       sqrt
+   \   00000152   0x4652             MOV      R2,R10
+   \   00000154   0x465B             MOV      R3,R11
+   \   00000156   0x.... 0x....      BL       __aeabi_dmul
+   \   0000015A   0x.... 0x....      BL       __aeabi_d2f
+   \   0000015E   0xF8C8 0x0000      STR      R0,[R8, #+0]
+     76                  if(devider != 0)
+   \   00000162   0x0038             MOVS     R0,R7
+   \   00000164   0x2100             MOVS     R1,#+0
+   \   00000166   0x.... 0x....      BL       __aeabi_cfcmpeq
+   \   0000016A   0xD01A             BEQ.N    ??least_spuare_9
+     77                  {
+     78                      *r = (temp_k)*sqrt((lenth*sum_x2-sumx_2)/devider);
+   \   0000016C   0x0030             MOVS     R0,R6
+   \   0000016E   0x.... 0x....      BL       __aeabi_f2d
+   \   00000172   0x4682             MOV      R10,R0
+   \   00000174   0x468B             MOV      R11,R1
+   \   00000176   0xFB05 0xF004      MUL      R0,R5,R4
+   \   0000017A   0x9901             LDR      R1,[SP, #+4]
+   \   0000017C   0x1A40             SUBS     R0,R0,R1
+   \   0000017E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000182   0x0039             MOVS     R1,R7
+   \   00000184   0x.... 0x....      BL       __aeabi_fdiv
+   \   00000188   0x.... 0x....      BL       __aeabi_f2d
+   \   0000018C   0x.... 0x....      BL       sqrt
+   \   00000190   0x4652             MOV      R2,R10
+   \   00000192   0x465B             MOV      R3,R11
+   \   00000194   0x.... 0x....      BL       __aeabi_dmul
+   \   00000198   0x.... 0x....      BL       __aeabi_d2f
+   \   0000019C   0xF8C8 0x0000      STR      R0,[R8, #+0]
+   \   000001A0   0xE002             B.N      ??least_spuare_8
+     79                  }
+     80                  else
+     81                  {
+     82                      *r = 0;
+   \                     ??least_spuare_9: (+1)
+   \   000001A2   0x2000             MOVS     R0,#+0
+   \   000001A4   0xF8C8 0x0000      STR      R0,[R8, #+0]
+     83                  }
+     84              }
+     85              *k = temp_k;
+   \                     ??least_spuare_8: (+1)
+   \   000001A8   0x9803             LDR      R0,[SP, #+12]
+   \   000001AA   0x6006             STR      R6,[R0, #+0]
+     86          }
+   \   000001AC   0xB005             ADD      SP,SP,#+20
+   \   000001AE   0xE8BD 0x8FF0      POP      {R4-R11,PC}      ;; return
+     87          
+     88          /**
+     89           *  @ brief   sum_average
+     90           *
+     91           *  @ param   the pointer of the p_num
+     92           *
+     93           *	@ note    get the Array's sum_average
+     94           *
+     95           *	@ return  sum_average_value
+     96           */
+
+   \                                 In section .text, align 2, keep-with-next
+     97          float sum_average(int16 *p_num)
+     98          {
+   \                     sum_average: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     99          	uint8 loop_i = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+    100          	float sum_average_value = 0;
+   \   00000006   0x2600             MOVS     R6,#+0
+    101          
+    102          	for(loop_i = 0; loop_i < LEAST_SQUARES_NUMBERS; loop_i ++)
+   \   00000008   0x2500             MOVS     R5,#+0
+   \   0000000A   0xE009             B.N      ??sum_average_0
+    103          	{
+    104          		sum_average_value = sum_average_value + p_num[loop_i];
+   \                     ??sum_average_1: (+1)
+   \   0000000C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000000E   0xF934 0x0015      LDRSH    R0,[R4, R5, LSL #+1]
+   \   00000012   0x.... 0x....      BL       __aeabi_i2f
+   \   00000016   0x0031             MOVS     R1,R6
+   \   00000018   0x.... 0x....      BL       __aeabi_fadd
+   \   0000001C   0x0006             MOVS     R6,R0
+    105          	}
+   \   0000001E   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??sum_average_0: (+1)
+   \   00000020   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000022   0x2D05             CMP      R5,#+5
+   \   00000024   0xDBF2             BLT.N    ??sum_average_1
+    106          
+    107          	sum_average_value = (float)(sum_average_value / LEAST_SQUARES_NUMBERS);
+   \   00000026   0x0030             MOVS     R0,R6
+   \   00000028   0x.... 0x....      LDR.W    R1,??DataTable6  ;; 0x40a00000
+   \   0000002C   0x.... 0x....      BL       __aeabi_fdiv
+   \   00000030   0x0006             MOVS     R6,R0
+    108          
+    109          	return (sum_average_value);
+   \   00000032   0x0030             MOVS     R0,R6
+   \   00000034   0xBD70             POP      {R4-R6,PC}       ;; return
+    110          }
+    111          
+    112          /**
+    113           *  @ brief   sum_multiplied
+    114           *
+    115           *  @ param   the pointer of the p_num_x,
+    116           *  		  and the pointer of the p_num_y
+    117           *
+    118           *	@ note    get the Array's sum_multiplied
+    119           *
+    120           *	@ return  multiplied_sum_value
+    121           */
+
+   \                                 In section .text, align 2, keep-with-next
+    122          float multiplied_sum(int16 *p_num_x, int16 *p_num_y)
+    123          {
+   \                     multiplied_sum: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+    124          	uint8 loop_i = 0;
+   \   00000006   0x2600             MOVS     R6,#+0
+    125          	float multiplied_sum_value = 0;
+   \   00000008   0x2700             MOVS     R7,#+0
+    126          
+    127          	for(loop_i = 0; loop_i < LEAST_SQUARES_NUMBERS; loop_i ++)
+   \   0000000A   0x2600             MOVS     R6,#+0
+   \   0000000C   0xE00E             B.N      ??multiplied_sum_0
+    128          	{
+    129          		multiplied_sum_value = (float)(multiplied_sum_value + p_num_x[loop_i] * p_num_y[loop_i]);
+   \                     ??multiplied_sum_1: (+1)
+   \   0000000E   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000010   0xF934 0x0016      LDRSH    R0,[R4, R6, LSL #+1]
+   \   00000014   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000016   0xF935 0x1016      LDRSH    R1,[R5, R6, LSL #+1]
+   \   0000001A   0xFB10 0xF001      SMULBB   R0,R0,R1
+   \   0000001E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000022   0x0039             MOVS     R1,R7
+   \   00000024   0x.... 0x....      BL       __aeabi_fadd
+   \   00000028   0x0007             MOVS     R7,R0
+    130          	}
+   \   0000002A   0x1C76             ADDS     R6,R6,#+1
+   \                     ??multiplied_sum_0: (+1)
+   \   0000002C   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000002E   0x2E05             CMP      R6,#+5
+   \   00000030   0xDBED             BLT.N    ??multiplied_sum_1
+    131          
+    132          	return (multiplied_sum_value);
+   \   00000032   0x0038             MOVS     R0,R7
+   \   00000034   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    133          }
+    134          
+    135          /**
+    136           *  @ brief   squre_sum
+    137           *
+    138           *  @ param   the pointer of the p_num_x,
+    139           *  		  and the pointer of the p_num_y
+    140           *
+    141           *	@ note    get the Array's sum_multiplied
+    142           *
+    143           *	@ return  multiplied_sum_value
+    144           */
+
+   \                                 In section .text, align 2, keep-with-next
+    145          float squre_sum(int16 *p_num)
+    146          {
+   \                     squre_sum: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    147          	uint8 loop_i = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+    148          	float squre_sum_value = 0;
+   \   00000006   0x2600             MOVS     R6,#+0
+    149          
+    150          	for(loop_i = 0; loop_i < LEAST_SQUARES_NUMBERS; loop_i ++)
+   \   00000008   0x2500             MOVS     R5,#+0
+   \   0000000A   0xE00E             B.N      ??squre_sum_0
+    151          	{
+    152          		squre_sum_value = squre_sum_value + p_num[loop_i] * p_num[loop_i];
+   \                     ??squre_sum_1: (+1)
+   \   0000000C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000000E   0xF934 0x0015      LDRSH    R0,[R4, R5, LSL #+1]
+   \   00000012   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000014   0xF934 0x1015      LDRSH    R1,[R4, R5, LSL #+1]
+   \   00000018   0xFB10 0xF001      SMULBB   R0,R0,R1
+   \   0000001C   0x.... 0x....      BL       __aeabi_i2f
+   \   00000020   0x0031             MOVS     R1,R6
+   \   00000022   0x.... 0x....      BL       __aeabi_fadd
+   \   00000026   0x0006             MOVS     R6,R0
+    153          	}
+   \   00000028   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??squre_sum_0: (+1)
+   \   0000002A   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000002C   0x2D05             CMP      R5,#+5
+   \   0000002E   0xDBED             BLT.N    ??squre_sum_1
+    154          
+    155          	return (squre_sum_value);
+   \   00000030   0x0030             MOVS     R0,R6
+   \   00000032   0xBD70             POP      {R4-R6,PC}       ;; return
+    156          }
+    157          
+    158          /**
+    159           *  @ brief   least_squares_value
+    160           *
+    161           *  @ param   the pointer of the p_sensor_value,
+    162           *
+    163           *	@ note    get the expected sensor value by least squares
+    164           *
+    165           *	@ return  expected_sensor_value
+    166           */
+
+   \                                 In section .text, align 2, keep-with-next
+    167          int16 least_squares_value(int16 *p_sensor_value)
+    168          {
+   \                     least_squares_value: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    169          	static uint8  s_first_flag = 1;
+    170          	static int16  s_x_value[LEAST_SQUARES_NUMBERS]    = {0};
+    171          	static int16  s_y_value[LEAST_SQUARES_NUMBERS]    = {0};
+    172          
+    173          	static float s_x_sum_average = 0;   // 数组 X[N] N个元素求和并求平均值
+    174          	static float s_x_square_sum  = 0;   // 数组 X[N] N个元素的平方和
+    175          	float y_sum_average = 0;            // 数组 Y[N] N个元素求和并求平均值
+   \   00000004   0x2500             MOVS     R5,#+0
+    176          	float x_y_multiplied_sum = 0;       // 数组 X[N] Y[N] N个元素乘积并求和
+   \   00000006   0x2600             MOVS     R6,#+0
+    177          
+    178          	float slope_k = 0;                  // 斜率
+   \   00000008   0x2600             MOVS     R6,#+0
+    179          	float intercept_r = 0;              // 截距
+   \   0000000A   0x2500             MOVS     R5,#+0
+    180          
+    181          	int16 expected_sensor_value = 0;
+   \   0000000C   0x2000             MOVS     R0,#+0
+    182          
+    183          	int8 loop_i = 0;
+   \   0000000E   0x2000             MOVS     R0,#+0
+    184          
+    185          	if(s_first_flag == 1)
+   \   00000010   0x.... 0x....      LDR.W    R0,??DataTable6_1
+   \   00000014   0x7800             LDRB     R0,[R0, #+0]
+   \   00000016   0x2801             CMP      R0,#+1
+   \   00000018   0xD11D             BNE.N    ??least_squares_value_0
+    186          	{
+    187          		s_first_flag = 0;
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x.... 0x....      LDR.W    R1,??DataTable6_1
+   \   00000020   0x7008             STRB     R0,[R1, #+0]
+    188          		for(loop_i = 0; loop_i < LEAST_SQUARES_NUMBERS; loop_i ++)
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xE006             B.N      ??least_squares_value_1
+    189          		{
+    190          			s_x_value[loop_i] = loop_i;
+   \                     ??least_squares_value_2: (+1)
+   \   00000026   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   00000028   0x.... 0x....      LDR.W    R1,??DataTable6_2
+   \   0000002C   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000002E   0xF821 0x0010      STRH     R0,[R1, R0, LSL #+1]
+    191          		}
+   \   00000032   0x1C40             ADDS     R0,R0,#+1
+   \                     ??least_squares_value_1: (+1)
+   \   00000034   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   00000036   0x2805             CMP      R0,#+5
+   \   00000038   0xDBF5             BLT.N    ??least_squares_value_2
+    192          
+    193          		s_x_sum_average = sum_average(s_x_value);
+   \   0000003A   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000003E   0x.... 0x....      BL       sum_average
+   \   00000042   0x.... 0x....      LDR.W    R1,??DataTable6_3
+   \   00000046   0x6008             STR      R0,[R1, #+0]
+    194          		s_x_square_sum  = squre_sum(s_x_value);
+   \   00000048   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   0000004C   0x.... 0x....      BL       squre_sum
+   \   00000050   0x.... 0x....      LDR.W    R1,??DataTable6_4
+   \   00000054   0x6008             STR      R0,[R1, #+0]
+    195          	}
+    196          
+    197          	for(loop_i = 0; loop_i < LEAST_SQUARES_NUMBERS; loop_i ++)
+   \                     ??least_squares_value_0: (+1)
+   \   00000056   0x2000             MOVS     R0,#+0
+   \   00000058   0xE008             B.N      ??least_squares_value_3
+    198          	{
+    199          		s_y_value[loop_i] = p_sensor_value[loop_i];
+   \                     ??least_squares_value_4: (+1)
+   \   0000005A   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000005C   0xF834 0x1010      LDRH     R1,[R4, R0, LSL #+1]
+   \   00000060   0x.... 0x....      LDR.W    R2,??DataTable6_5
+   \   00000064   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   00000066   0xF822 0x1010      STRH     R1,[R2, R0, LSL #+1]
+    200          	}
+   \   0000006A   0x1C40             ADDS     R0,R0,#+1
+   \                     ??least_squares_value_3: (+1)
+   \   0000006C   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000006E   0x2805             CMP      R0,#+5
+   \   00000070   0xDBF3             BLT.N    ??least_squares_value_4
+    201          
+    202          	y_sum_average = sum_average(s_y_value);
+   \   00000072   0x.... 0x....      LDR.W    R0,??DataTable6_5
+   \   00000076   0x.... 0x....      BL       sum_average
+   \   0000007A   0x0005             MOVS     R5,R0
+    203          	x_y_multiplied_sum = multiplied_sum(s_x_value, s_y_value);
+   \   0000007C   0x.... 0x....      LDR.W    R1,??DataTable6_5
+   \   00000080   0x.... 0x....      LDR.W    R0,??DataTable6_2
+   \   00000084   0x.... 0x....      BL       multiplied_sum
+   \   00000088   0x0006             MOVS     R6,R0
+    204          
+    205          
+    206          	slope_k = ((float)( x_y_multiplied_sum - (LEAST_SQUARES_NUMBERS * s_x_sum_average * y_sum_average))
+    207          			/ (float)(( s_x_square_sum - (float)(LEAST_SQUARES_NUMBERS * s_x_sum_average * s_x_sum_average))));
+   \   0000008A   0x.... 0x....      LDR.W    R0,??DataTable6_3
+   \   0000008E   0x6801             LDR      R1,[R0, #+0]
+   \   00000090   0x.... 0x....      LDR.W    R0,??DataTable6  ;; 0x40a00000
+   \   00000094   0x.... 0x....      BL       __aeabi_fmul
+   \   00000098   0x0029             MOVS     R1,R5
+   \   0000009A   0x.... 0x....      BL       __aeabi_fmul
+   \   0000009E   0x0001             MOVS     R1,R0
+   \   000000A0   0x0030             MOVS     R0,R6
+   \   000000A2   0x.... 0x....      BL       __aeabi_fsub
+   \   000000A6   0x0004             MOVS     R4,R0
+   \   000000A8   0x.... 0x....      LDR.W    R0,??DataTable6_3
+   \   000000AC   0x6801             LDR      R1,[R0, #+0]
+   \   000000AE   0x.... 0x....      LDR.W    R0,??DataTable6  ;; 0x40a00000
+   \   000000B2   0x.... 0x....      BL       __aeabi_fmul
+   \   000000B6   0x.... 0x....      LDR.W    R1,??DataTable6_3
+   \   000000BA   0x6809             LDR      R1,[R1, #+0]
+   \   000000BC   0x.... 0x....      BL       __aeabi_fmul
+   \   000000C0   0x0001             MOVS     R1,R0
+   \   000000C2   0x.... 0x....      LDR.W    R0,??DataTable6_4
+   \   000000C6   0x6800             LDR      R0,[R0, #+0]
+   \   000000C8   0x.... 0x....      BL       __aeabi_fsub
+   \   000000CC   0x0001             MOVS     R1,R0
+   \   000000CE   0x0020             MOVS     R0,R4
+   \   000000D0   0x.... 0x....      BL       __aeabi_fdiv
+   \   000000D4   0x0006             MOVS     R6,R0
+    208          
+    209          	intercept_r = ((float)y_sum_average - (float)slope_k * s_x_sum_average);
+   \   000000D6   0x.... 0x....      LDR.W    R0,??DataTable6_3
+   \   000000DA   0x6800             LDR      R0,[R0, #+0]
+   \   000000DC   0x0031             MOVS     R1,R6
+   \   000000DE   0x.... 0x....      BL       __aeabi_fmul
+   \   000000E2   0x0001             MOVS     R1,R0
+   \   000000E4   0x0028             MOVS     R0,R5
+   \   000000E6   0x.... 0x....      BL       __aeabi_fsub
+   \   000000EA   0x0005             MOVS     R5,R0
+    210          
+    211          	expected_sensor_value = (uint16) ((int16)(slope_k * (0-1) + intercept_r));
+   \   000000EC   0x.... 0x....      LDR.W    R0,??DataTable6_6  ;; 0xbf800000
+   \   000000F0   0x0031             MOVS     R1,R6
+   \   000000F2   0x.... 0x....      BL       __aeabi_fmul
+   \   000000F6   0x0029             MOVS     R1,R5
+   \   000000F8   0x.... 0x....      BL       __aeabi_fadd
+   \   000000FC   0x.... 0x....      BL       __aeabi_f2iz
+    212          
+    213          	return (expected_sensor_value);
+   \   00000100   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000102   0xBD70             POP      {R4-R6,PC}       ;; return
+    214          }
+
+   \                                 In section .data, align 1
+   \                     `least_squares_value::s_first_flag`:
+   \   00000000   0x01               DC8 1
+
+   \                                 In section .bss, align 4
+   \                     `least_squares_value::s_x_value`:
+   \   00000000                      DS8 12
+
+   \                                 In section .bss, align 4
+   \                     `least_squares_value::s_y_value`:
+   \   00000000                      DS8 12
+
+   \                                 In section .bss, align 4
+   \                     `least_squares_value::s_x_sum_average`:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \                     `least_squares_value::s_x_square_sum`:
+   \   00000000                      DS8 4
+    215          
+    216          //y=ax+b
+    217          //a=(N*Σxy-ΣxΣy)/(N*Σx^2-(Σx)^2)
+    218          //b=y(平均)-a*x（平均）
+    219          
+    220          //r^2=(N*Σxy-ΣxΣy)^2 / ((N*Σx^2-(Σx)^2)*(N*Σy^2-(Σy)^2))
+    221          
+    222          //返回值 p100a  a 乘了100
+
+   \                                 In section .text, align 2, keep-with-next
+    223          void LinerFit(int16 *x, int16 *y, uint8 u8Num, float *pa, float *pb, float *pr_2, int32 *p100a)
+    224          {
+   \                     LinerFit: (+1)
+   \   00000000   0xE92D 0x4FF0      PUSH     {R4-R11,LR}
+   \   00000004   0xB083             SUB      SP,SP,#+12
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x000D             MOVS     R5,R1
+   \   0000000A   0x0016             MOVS     R6,R2
+   \   0000000C   0x4698             MOV      R8,R3
+    225              int32 i32Temp1, i32Temp2, i32Temp3;
+    226              
+    227              double f32Temp;
+    228              
+    229              //int32 i32youhua;
+    230              
+    231              i32Temp1 = u8Num*SigmaXY(x, y, u8Num) - Sigma(x, u8Num)*Sigma(y, u8Num);
+   \   0000000E   0x0032             MOVS     R2,R6
+   \   00000010   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000012   0x0029             MOVS     R1,R5
+   \   00000014   0x0020             MOVS     R0,R4
+   \   00000016   0x.... 0x....      BL       SigmaXY
+   \   0000001A   0x0007             MOVS     R7,R0
+   \   0000001C   0x0031             MOVS     R1,R6
+   \   0000001E   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000020   0x0020             MOVS     R0,R4
+   \   00000022   0x.... 0x....      BL       Sigma
+   \   00000026   0x4681             MOV      R9,R0
+   \   00000028   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000002A   0xFB07 0xF706      MUL      R7,R7,R6
+   \   0000002E   0x0031             MOVS     R1,R6
+   \   00000030   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000032   0x0028             MOVS     R0,R5
+   \   00000034   0x.... 0x....      BL       Sigma
+   \   00000038   0xFB19 0xF000      SMULBB   R0,R9,R0
+   \   0000003C   0x1A3F             SUBS     R7,R7,R0
+    232              i32Temp2 = u8Num*SigmaXX(x, u8Num) - Sigma(x, u8Num)*Sigma(x, u8Num);
+   \   0000003E   0x0031             MOVS     R1,R6
+   \   00000040   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x.... 0x....      BL       SigmaXX
+   \   00000048   0x4681             MOV      R9,R0
+   \   0000004A   0x0031             MOVS     R1,R6
+   \   0000004C   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000004E   0x0020             MOVS     R0,R4
+   \   00000050   0x.... 0x....      BL       Sigma
+   \   00000054   0x4682             MOV      R10,R0
+   \   00000056   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000058   0xFB09 0xF906      MUL      R9,R9,R6
+   \   0000005C   0x0031             MOVS     R1,R6
+   \   0000005E   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000060   0x0020             MOVS     R0,R4
+   \   00000062   0x.... 0x....      BL       Sigma
+   \   00000066   0xFB1A 0xF000      SMULBB   R0,R10,R0
+   \   0000006A   0xEBB9 0x0900      SUBS     R9,R9,R0
+    233              
+    234              if (pa != NULL)
+   \   0000006E   0xF1B8 0x0F00      CMP      R8,#+0
+   \   00000072   0xD011             BEQ.N    ??LinerFit_0
+    235              {    
+    236                  *pa = i32Temp1 / (double)i32Temp2;
+   \   00000074   0x0038             MOVS     R0,R7
+   \   00000076   0x.... 0x....      BL       __aeabi_i2d
+   \   0000007A   0x4682             MOV      R10,R0
+   \   0000007C   0x468B             MOV      R11,R1
+   \   0000007E   0x4648             MOV      R0,R9
+   \   00000080   0x.... 0x....      BL       __aeabi_i2d
+   \   00000084   0x0002             MOVS     R2,R0
+   \   00000086   0x000B             MOVS     R3,R1
+   \   00000088   0x4650             MOV      R0,R10
+   \   0000008A   0x4659             MOV      R1,R11
+   \   0000008C   0x.... 0x....      BL       __aeabi_ddiv
+   \   00000090   0x.... 0x....      BL       __aeabi_d2f
+   \   00000094   0xF8C8 0x0000      STR      R0,[R8, #+0]
+   \                     ??LinerFit_0: (+1)
+   \   00000098   0x980E             LDR      R0,[SP, #+56]
+    237              }
+    238              
+    239              if (p100a != NULL)
+   \   0000009A   0x2800             CMP      R0,#+0
+   \   0000009C   0xD005             BEQ.N    ??LinerFit_1
+    240              {
+    241                  *p100a = 100 * i32Temp1 / i32Temp2;
+   \   0000009E   0x2164             MOVS     R1,#+100
+   \   000000A0   0xFB01 0xF107      MUL      R1,R1,R7
+   \   000000A4   0xFB91 0xF1F9      SDIV     R1,R1,R9
+   \   000000A8   0x6001             STR      R1,[R0, #+0]
+   \                     ??LinerFit_1: (+1)
+   \   000000AA   0xF8DD 0xA030      LDR      R10,[SP, #+48]
+    242              }
+    243              
+    244              if (pb != NULL)
+   \   000000AE   0xF1BA 0x0F00      CMP      R10,#+0
+   \   000000B2   0xD02C             BEQ.N    ??LinerFit_2
+    245              {
+    246                  //没要求计算a
+    247                  if (*pa == NULL)
+   \   000000B4   0xF8D8 0x0000      LDR      R0,[R8, #+0]
+   \   000000B8   0x2100             MOVS     R1,#+0
+   \   000000BA   0x.... 0x....      BL       __aeabi_cfcmpeq
+   \   000000BE   0xD111             BNE.N    ??LinerFit_3
+    248                  {
+    249                      *pa = i32Temp1 / (double)i32Temp2;
+   \   000000C0   0x0038             MOVS     R0,R7
+   \   000000C2   0x.... 0x....      BL       __aeabi_i2d
+   \   000000C6   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
+   \   000000CA   0x4648             MOV      R0,R9
+   \   000000CC   0x.... 0x....      BL       __aeabi_i2d
+   \   000000D0   0x0002             MOVS     R2,R0
+   \   000000D2   0x000B             MOVS     R3,R1
+   \   000000D4   0xE9DD 0x0100      LDRD     R0,R1,[SP, #+0]
+   \   000000D8   0x.... 0x....      BL       __aeabi_ddiv
+   \   000000DC   0x.... 0x....      BL       __aeabi_d2f
+   \   000000E0   0xF8C8 0x0000      STR      R0,[R8, #+0]
+    250                  }
+    251                  
+    252                  *pb = Average(y, u8Num) - (*pa) * Average(x, u8Num);
+   \                     ??LinerFit_3: (+1)
+   \   000000E4   0x0031             MOVS     R1,R6
+   \   000000E6   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   000000E8   0x0028             MOVS     R0,R5
+   \   000000EA   0x.... 0x....      BL       Average
+   \   000000EE   0x4683             MOV      R11,R0
+   \   000000F0   0x0031             MOVS     R1,R6
+   \   000000F2   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   000000F4   0x0020             MOVS     R0,R4
+   \   000000F6   0x.... 0x....      BL       Average
+   \   000000FA   0xF8D8 0x1000      LDR      R1,[R8, #+0]
+   \   000000FE   0x.... 0x....      BL       __aeabi_fmul
+   \   00000102   0x0001             MOVS     R1,R0
+   \   00000104   0x4658             MOV      R0,R11
+   \   00000106   0x.... 0x....      BL       __aeabi_fsub
+   \   0000010A   0xF8CA 0x0000      STR      R0,[R10, #+0]
+   \                     ??LinerFit_2: (+1)
+   \   0000010E   0xF8DD 0x8034      LDR      R8,[SP, #+52]
+    253              }
+    254              
+    255              if (pr_2 != NULL)
+   \   00000112   0xF1B8 0x0F00      CMP      R8,#+0
+   \   00000116   0xD03C             BEQ.N    ??LinerFit_4
+    256              {
+    257                  i32Temp3 = u8Num*SigmaXX(y, u8Num) - Sigma(y, u8Num)*Sigma(y, u8Num);       
+   \   00000118   0x0031             MOVS     R1,R6
+   \   0000011A   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000011C   0x0028             MOVS     R0,R5
+   \   0000011E   0x.... 0x....      BL       SigmaXX
+   \   00000122   0x0004             MOVS     R4,R0
+   \   00000124   0x0031             MOVS     R1,R6
+   \   00000126   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000128   0x0028             MOVS     R0,R5
+   \   0000012A   0x.... 0x....      BL       Sigma
+   \   0000012E   0x4682             MOV      R10,R0
+   \   00000130   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000132   0xFB04 0xF406      MUL      R4,R4,R6
+   \   00000136   0x0031             MOVS     R1,R6
+   \   00000138   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000013A   0x0028             MOVS     R0,R5
+   \   0000013C   0x.... 0x....      BL       Sigma
+   \   00000140   0xFB1A 0xF000      SMULBB   R0,R10,R0
+   \   00000144   0x1A26             SUBS     R6,R4,R0
+    258                  f32Temp = i32Temp1 / (double)i32Temp2;        
+   \   00000146   0x0038             MOVS     R0,R7
+   \   00000148   0x.... 0x....      BL       __aeabi_i2d
+   \   0000014C   0x0004             MOVS     R4,R0
+   \   0000014E   0x000D             MOVS     R5,R1
+   \   00000150   0x4648             MOV      R0,R9
+   \   00000152   0x.... 0x....      BL       __aeabi_i2d
+   \   00000156   0x0002             MOVS     R2,R0
+   \   00000158   0x000B             MOVS     R3,R1
+   \   0000015A   0x0020             MOVS     R0,R4
+   \   0000015C   0x0029             MOVS     R1,R5
+   \   0000015E   0x.... 0x....      BL       __aeabi_ddiv
+   \   00000162   0x0004             MOVS     R4,R0
+   \   00000164   0x000D             MOVS     R5,R1
+    259                      
+    260                  *pr_2 = f32Temp * i32Temp1 / i32Temp3;
+   \   00000166   0x0038             MOVS     R0,R7
+   \   00000168   0x.... 0x....      BL       __aeabi_i2d
+   \   0000016C   0x0022             MOVS     R2,R4
+   \   0000016E   0x002B             MOVS     R3,R5
+   \   00000170   0x.... 0x....      BL       __aeabi_dmul
+   \   00000174   0x0004             MOVS     R4,R0
+   \   00000176   0x000D             MOVS     R5,R1
+   \   00000178   0x0030             MOVS     R0,R6
+   \   0000017A   0x.... 0x....      BL       __aeabi_i2d
+   \   0000017E   0x0002             MOVS     R2,R0
+   \   00000180   0x000B             MOVS     R3,R1
+   \   00000182   0x0020             MOVS     R0,R4
+   \   00000184   0x0029             MOVS     R1,R5
+   \   00000186   0x.... 0x....      BL       __aeabi_ddiv
+   \   0000018A   0x.... 0x....      BL       __aeabi_d2f
+   \   0000018E   0xF8C8 0x0000      STR      R0,[R8, #+0]
+    261              }    
+    262           
+    263          }
+   \                     ??LinerFit_4: (+1)
+   \   00000192   0xE8BD 0x8FF7      POP      {R0-R2,R4-R11,PC}  ;; return
+    264          
+
+   \                                 In section .text, align 2, keep-with-next
+    265          int16 Sigma(int16 *Data, uint8 u8Num)
+    266          {
+   \                     Sigma: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+    267              uint8 u8i;
+    268              int16 fSigma = 0;
+   \   00000002   0x2200             MOVS     R2,#+0
+    269              
+    270              for(u8i=0; u8i<u8Num; u8i++)
+   \   00000004   0x2300             MOVS     R3,#+0
+   \   00000006   0xE004             B.N      ??Sigma_0
+    271              {        
+    272                  fSigma += Data[u8i];       
+   \                     ??Sigma_1: (+1)
+   \   00000008   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   0000000A   0xF830 0x4013      LDRH     R4,[R0, R3, LSL #+1]
+   \   0000000E   0x18A2             ADDS     R2,R4,R2
+    273              }
+   \   00000010   0x1C5B             ADDS     R3,R3,#+1
+   \                     ??Sigma_0: (+1)
+   \   00000012   0x001C             MOVS     R4,R3
+   \   00000014   0x000D             MOVS     R5,R1
+   \   00000016   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000018   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000001A   0x42AC             CMP      R4,R5
+   \   0000001C   0xD3F4             BCC.N    ??Sigma_1
+    274              
+    275              return fSigma;
+   \   0000001E   0x0010             MOVS     R0,R2
+   \   00000020   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000022   0xBC30             POP      {R4,R5}
+   \   00000024   0x4770             BX       LR               ;; return
+    276          }
+    277          
+
+   \                                 In section .text, align 2, keep-with-next
+    278          float Average(int16 *Data, uint8 u8Num)
+    279          {
+   \                     Average: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    280              float fAverage;
+    281              
+    282              fAverage = Sigma(Data, u8Num) / (float)u8Num;
+   \   00000004   0x0021             MOVS     R1,R4
+   \   00000006   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000008   0x.... 0x....      BL       Sigma
+   \   0000000C   0x.... 0x....      BL       __aeabi_i2f
+   \   00000010   0x0005             MOVS     R5,R0
+   \   00000012   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000014   0x0020             MOVS     R0,R4
+   \   00000016   0x.... 0x....      BL       __aeabi_ui2f
+   \   0000001A   0x0001             MOVS     R1,R0
+   \   0000001C   0x0028             MOVS     R0,R5
+   \   0000001E   0x.... 0x....      BL       __aeabi_fdiv
+    283              
+    284              return fAverage;
+   \   00000022   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    285          }
+    286          
+
+   \                                 In section .text, align 2, keep-with-next
+    287          int32 SigmaXY(int16 *x, int16 *y, uint8 u8Num)
+    288          {
+   \                     SigmaXY: (+1)
+   \   00000000   0xB470             PUSH     {R4-R6}
+    289              int16 fXY;
+    290              uint8 u8i;    
+    291              int32 fSigma = 0;
+   \   00000002   0x2300             MOVS     R3,#+0
+    292              
+    293              for(u8i=0; u8i<u8Num; u8i++)
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0xE00A             B.N      ??SigmaXY_0
+    294              {   
+    295                  fXY = x[u8i] * y[u8i];
+   \                     ??SigmaXY_1: (+1)
+   \   00000008   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000000A   0xF830 0x4015      LDRH     R4,[R0, R5, LSL #+1]
+   \   0000000E   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000010   0xF831 0x6015      LDRH     R6,[R1, R5, LSL #+1]
+   \   00000014   0xFB14 0xF406      SMULBB   R4,R4,R6
+    296                  fSigma += fXY;       
+   \   00000018   0xFA03 0xF384      SXTAH    R3,R3,R4
+    297              }
+   \   0000001C   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??SigmaXY_0: (+1)
+   \   0000001E   0x002C             MOVS     R4,R5
+   \   00000020   0x0016             MOVS     R6,R2
+   \   00000022   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000024   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000026   0x42B4             CMP      R4,R6
+   \   00000028   0xD3EE             BCC.N    ??SigmaXY_1
+    298              
+    299              return fSigma;   
+   \   0000002A   0x0018             MOVS     R0,R3
+   \   0000002C   0xBC70             POP      {R4-R6}
+   \   0000002E   0x4770             BX       LR               ;; return
+    300          }
+    301              
+
+   \                                 In section .text, align 2, keep-with-next
+    302          int32 SigmaXX(int16 *Data, uint8 u8Num)  
+    303          {
+   \                     SigmaXX: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+    304              int16 fXX;
+    305              uint8 u8i;    
+    306              int32 fSigma = 0;
+   \   00000002   0x2200             MOVS     R2,#+0
+    307              
+    308              for(u8i=0; u8i<u8Num; u8i++)
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0xE00A             B.N      ??SigmaXX_0
+    309              {   
+    310                  fXX = Data[u8i] * Data[u8i];
+   \                     ??SigmaXX_1: (+1)
+   \   00000008   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000000A   0xF830 0x3014      LDRH     R3,[R0, R4, LSL #+1]
+   \   0000000E   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000010   0xF830 0x5014      LDRH     R5,[R0, R4, LSL #+1]
+   \   00000014   0xFB13 0xF305      SMULBB   R3,R3,R5
+    311                  fSigma += fXX;       
+   \   00000018   0xFA02 0xF283      SXTAH    R2,R2,R3
+    312              }
+   \   0000001C   0x1C64             ADDS     R4,R4,#+1
+   \                     ??SigmaXX_0: (+1)
+   \   0000001E   0x0023             MOVS     R3,R4
+   \   00000020   0x000D             MOVS     R5,R1
+   \   00000022   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000024   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000026   0x42AB             CMP      R3,R5
+   \   00000028   0xD3EE             BCC.N    ??SigmaXX_1
+    313              
+    314              return fSigma;    
+   \   0000002A   0x0010             MOVS     R0,R2
+   \   0000002C   0xBC30             POP      {R4,R5}
+   \   0000002E   0x4770             BX       LR               ;; return
+    315          }
+    316          
+
+   \                                 In section .text, align 2, keep-with-next
+    317          void Delay_ms(uint32 u32time)
+    318          {
+    319              uint32 u32SetTime;
+    320              uint32 u32CurrentTime; 
+    321              uint32 u32Cnt = 0;
+   \                     Delay_ms: (+1)
+   \   00000000   0x2300             MOVS     R3,#+0
+    322              
+    323              if (u32time == 0)
+   \   00000002   0x2800             CMP      R0,#+0
+   \   00000004   0xD010             BEQ.N    ??Delay_ms_0
+    324              {
+    325                  return;
+    326              }
+    327              
+    328              u32time *= 10;
+   \                     ??Delay_ms_1: (+1)
+   \   00000006   0x210A             MOVS     R1,#+10
+   \   00000008   0x4348             MULS     R0,R1,R0
+    329              u32SetTime = gul_time_100us;
+   \   0000000A   0x....             LDR.N    R1,??DataTable6_7
+   \   0000000C   0x6809             LDR      R1,[R1, #+0]
+    330              u32CurrentTime = gul_time_100us;
+   \   0000000E   0x....             LDR.N    R2,??DataTable6_7
+   \   00000010   0x6812             LDR      R2,[R2, #+0]
+   \   00000012   0xE002             B.N      ??Delay_ms_2
+    331              
+    332              while(((u32CurrentTime - u32SetTime) < u32time) && (u32Cnt < 0xffffff))
+    333              {
+    334                  u32CurrentTime = gul_time_100us;    
+   \                     ??Delay_ms_3: (+1)
+   \   00000014   0x....             LDR.N    R2,??DataTable6_7
+   \   00000016   0x6812             LDR      R2,[R2, #+0]
+    335                  u32Cnt++;
+   \   00000018   0x1C5B             ADDS     R3,R3,#+1
+    336              }  
+   \                     ??Delay_ms_2: (+1)
+   \   0000001A   0x1A52             SUBS     R2,R2,R1
+   \   0000001C   0x4282             CMP      R2,R0
+   \   0000001E   0xD203             BCS.N    ??Delay_ms_4
+   \   00000020   0xF07F 0x427F      MVNS     R2,#-16777216
+   \   00000024   0x4293             CMP      R3,R2
+   \   00000026   0xD3F5             BCC.N    ??Delay_ms_3
+    337          }
+   \                     ??Delay_ms_4: (+1)
+   \                     ??Delay_ms_0: (+1)
+   \   00000028   0x4770             BX       LR               ;; return
+    338          
+    339          #define MAX_TIME_CHANNEL 10
+    340          /*定时函数，   不占用系统时间
+    341          *当定时通道定时到时，返回1
+    342          *定时未到时，返回0
+    343          *只有定时到之后，才可设置有效的下一次定时
+    344          */
+
+   \                                 In section .text, align 2, keep-with-next
+    345          uint8 sleep_ms(uint32 u32time,uint8 channel)
+    346          {
+   \                     sleep_ms: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    347                  static uint32 time_set[MAX_TIME_CHANNEL];
+    348                  static uint8 u8_is_timeup[MAX_TIME_CHANNEL];
+    349                  static uint8 flag=0;
+    350                  int8 i = 0;
+   \   00000002   0x2200             MOVS     R2,#+0
+    351                  
+    352                  if(flag == 0)
+   \   00000004   0x....             LDR.N    R2,??DataTable6_8
+   \   00000006   0x7812             LDRB     R2,[R2, #+0]
+   \   00000008   0x2A00             CMP      R2,#+0
+   \   0000000A   0xD111             BNE.N    ??sleep_ms_0
+    353                  {
+    354                      for(i=0;i<MAX_TIME_CHANNEL;i++)
+   \   0000000C   0x2200             MOVS     R2,#+0
+   \   0000000E   0xE009             B.N      ??sleep_ms_1
+    355                      {
+    356                          time_set[i] = 0;
+   \                     ??sleep_ms_2: (+1)
+   \   00000010   0x2300             MOVS     R3,#+0
+   \   00000012   0x....             LDR.N    R4,??DataTable6_9
+   \   00000014   0xB252             SXTB     R2,R2            ;; SignExt  R2,R2,#+24,#+24
+   \   00000016   0xF844 0x3022      STR      R3,[R4, R2, LSL #+2]
+    357                          u8_is_timeup[i] = 1;
+   \   0000001A   0x2301             MOVS     R3,#+1
+   \   0000001C   0x....             LDR.N    R4,??DataTable6_10
+   \   0000001E   0xB252             SXTB     R2,R2            ;; SignExt  R2,R2,#+24,#+24
+   \   00000020   0x54A3             STRB     R3,[R4, R2]
+    358                      }
+   \   00000022   0x1C52             ADDS     R2,R2,#+1
+   \                     ??sleep_ms_1: (+1)
+   \   00000024   0xB252             SXTB     R2,R2            ;; SignExt  R2,R2,#+24,#+24
+   \   00000026   0x2A0A             CMP      R2,#+10
+   \   00000028   0xDBF2             BLT.N    ??sleep_ms_2
+    359                      flag = 1;
+   \   0000002A   0x2201             MOVS     R2,#+1
+   \   0000002C   0x....             LDR.N    R3,??DataTable6_8
+   \   0000002E   0x701A             STRB     R2,[R3, #+0]
+    360                  }
+    361                  
+    362          	if(channel<=MAX_TIME_CHANNEL)
+   \                     ??sleep_ms_0: (+1)
+   \   00000030   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000032   0x290B             CMP      R1,#+11
+   \   00000034   0xDA30             BGE.N    ??sleep_ms_3
+    363          	{
+    364          		if(u8_is_timeup[channel]==1)
+   \   00000036   0x....             LDR.N    R2,??DataTable6_10
+   \   00000038   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000003A   0x5C52             LDRB     R2,[R2, R1]
+   \   0000003C   0x2A01             CMP      R2,#+1
+   \   0000003E   0xD10D             BNE.N    ??sleep_ms_4
+    365                          {
+    366                                time_set[channel] = gul_time_100us + u32time*10;
+   \   00000040   0x....             LDR.N    R2,??DataTable6_7
+   \   00000042   0x6812             LDR      R2,[R2, #+0]
+   \   00000044   0x230A             MOVS     R3,#+10
+   \   00000046   0xFB03 0x2000      MLA      R0,R3,R0,R2
+   \   0000004A   0x....             LDR.N    R2,??DataTable6_9
+   \   0000004C   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000004E   0xF842 0x0021      STR      R0,[R2, R1, LSL #+2]
+    367                                u8_is_timeup[channel] = 0;
+   \   00000052   0x2000             MOVS     R0,#+0
+   \   00000054   0x....             LDR.N    R2,??DataTable6_10
+   \   00000056   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000058   0x5450             STRB     R0,[R2, R1]
+   \   0000005A   0xE019             B.N      ??sleep_ms_5
+    368                          }
+    369                          else if(u8_is_timeup[channel]==0)
+   \                     ??sleep_ms_4: (+1)
+   \   0000005C   0x....             LDR.N    R2,??DataTable6_10
+   \   0000005E   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000060   0x5C52             LDRB     R2,[R2, R1]
+   \   00000062   0x2A00             CMP      R2,#+0
+   \   00000064   0xD114             BNE.N    ??sleep_ms_5
+    370                          {
+    371                               if(gul_time_100us>=time_set[channel])
+   \   00000066   0x....             LDR.N    R2,??DataTable6_7
+   \   00000068   0x6812             LDR      R2,[R2, #+0]
+   \   0000006A   0x....             LDR.N    R3,??DataTable6_9
+   \   0000006C   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000006E   0xF853 0x3021      LDR      R3,[R3, R1, LSL #+2]
+   \   00000072   0x429A             CMP      R2,R3
+   \   00000074   0xD30C             BCC.N    ??sleep_ms_5
+    372                               {
+    373                                   u8_is_timeup[channel] = 1; 
+   \   00000076   0x2201             MOVS     R2,#+1
+   \   00000078   0x....             LDR.N    R3,??DataTable6_10
+   \   0000007A   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000007C   0x545A             STRB     R2,[R3, R1]
+    374                                   time_set[channel] = gul_time_100us + u32time*10;
+   \   0000007E   0x....             LDR.N    R2,??DataTable6_7
+   \   00000080   0x6812             LDR      R2,[R2, #+0]
+   \   00000082   0x230A             MOVS     R3,#+10
+   \   00000084   0xFB03 0x2000      MLA      R0,R3,R0,R2
+   \   00000088   0x....             LDR.N    R2,??DataTable6_9
+   \   0000008A   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000008C   0xF842 0x0021      STR      R0,[R2, R1, LSL #+2]
+    375                               }
+    376                          }
+    377                          return u8_is_timeup[channel];
+   \                     ??sleep_ms_5: (+1)
+   \   00000090   0x....             LDR.N    R0,??DataTable6_10
+   \   00000092   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000094   0x5C40             LDRB     R0,[R0, R1]
+   \   00000096   0xE000             B.N      ??sleep_ms_6
+    378          	}
+    379                  else
+    380                  {
+    381                       return 1;
+   \                     ??sleep_ms_3: (+1)
+   \   00000098   0x2001             MOVS     R0,#+1
+   \                     ??sleep_ms_6: (+1)
+   \   0000009A   0xBC10             POP      {R4}
+   \   0000009C   0x4770             BX       LR               ;; return
+    382                  }
+    383          }
+
+   \                                 In section .bss, align 4
+   \                     `sleep_ms::time_set`:
+   \   00000000                      DS8 40
+
+   \                                 In section .bss, align 4
+   \                     `sleep_ms::u8_is_timeup`:
+   \   00000000                      DS8 12
+
+   \                                 In section .bss, align 1
+   \                     `sleep_ms::flag`:
+   \   00000000                      DS8 1
+    384          
+
+   \                                 In section .text, align 2, keep-with-next
+    385          uint32 time_100us(uint8 channel)	//可以提供多个计时通道
+    386          {
+    387          	static uint32 time_temp[MAX_TIME_CHANNEL];
+    388          	uint32 time_interval = 0;
+   \                     time_100us: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+    389          	if(channel<=MAX_TIME_CHANNEL)
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0x280B             CMP      R0,#+11
+   \   00000006   0xDA0C             BGE.N    ??time_100us_0
+    390          	{
+    391          		time_interval = gul_time_100us - time_temp[channel];
+   \   00000008   0x....             LDR.N    R1,??DataTable6_7
+   \   0000000A   0x6809             LDR      R1,[R1, #+0]
+   \   0000000C   0x....             LDR.N    R2,??DataTable6_11
+   \   0000000E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000010   0xF852 0x2020      LDR      R2,[R2, R0, LSL #+2]
+   \   00000014   0x1A89             SUBS     R1,R1,R2
+    392          		time_temp[channel] = gul_time_100us;
+   \   00000016   0x....             LDR.N    R2,??DataTable6_7
+   \   00000018   0x6812             LDR      R2,[R2, #+0]
+   \   0000001A   0x....             LDR.N    R3,??DataTable6_11
+   \   0000001C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001E   0xF843 0x2020      STR      R2,[R3, R0, LSL #+2]
+    393          	}
+    394          	
+    395          	return time_interval;
+   \                     ??time_100us_0: (+1)
+   \   00000022   0x0008             MOVS     R0,R1
+   \   00000024   0x4770             BX       LR               ;; return
+    396          }
+
+   \                                 In section .bss, align 4
+   \                     `time_100us::time_temp`:
+   \   00000000                      DS8 40
+    397          
+
+   \                                 In section .text, align 2, keep-with-next
+    398          int32 power(int16 data, int16 index)
+    399          {
+   \                     power: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+    400              int32 returnValue = 1;
+   \   00000002   0x2201             MOVS     R2,#+1
+    401              int16 loopi = 0;
+   \   00000004   0x2300             MOVS     R3,#+0
+    402              
+    403              for(loopi = 0; loopi < index; loopi ++)
+   \   00000006   0x2300             MOVS     R3,#+0
+   \   00000008   0xE002             B.N      ??power_0
+    404              {
+    405                  returnValue = returnValue * data;
+   \                     ??power_1: (+1)
+   \   0000000A   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000000C   0x4342             MULS     R2,R0,R2
+    406              }
+   \   0000000E   0x1C5B             ADDS     R3,R3,#+1
+   \                     ??power_0: (+1)
+   \   00000010   0x001C             MOVS     R4,R3
+   \   00000012   0x000D             MOVS     R5,R1
+   \   00000014   0xB224             SXTH     R4,R4            ;; SignExt  R4,R4,#+16,#+16
+   \   00000016   0xB22D             SXTH     R5,R5            ;; SignExt  R5,R5,#+16,#+16
+   \   00000018   0x42AC             CMP      R4,R5
+   \   0000001A   0xDBF6             BLT.N    ??power_1
+    407              
+    408              return returnValue;
+   \   0000001C   0x0010             MOVS     R0,R2
+   \   0000001E   0xBC30             POP      {R4,R5}
+   \   00000020   0x4770             BX       LR               ;; return
+    409          }
+    410          
+
+   \                                 In section .text, align 2, keep-with-next
+    411          int16 getSimpilfiedAverage(int16 *data,int start,int end)
+    412          {
+   \                     getSimpilfiedAverage: (+1)
+   \   00000000   0xB470             PUSH     {R4-R6}
+    413              int32 sum = 0;
+   \   00000002   0x2300             MOVS     R3,#+0
+    414              int16 loopi = 0;
+   \   00000004   0x2400             MOVS     R4,#+0
+    415              
+    416              for(loopi = start; loopi < end; loopi ++)
+   \   00000006   0x000C             MOVS     R4,R1
+   \   00000008   0xE006             B.N      ??getSimpilfiedAverage_0
+    417              {
+    418                  sum += (10 * data[loopi]);
+   \                     ??getSimpilfiedAverage_1: (+1)
+   \   0000000A   0xB224             SXTH     R4,R4            ;; SignExt  R4,R4,#+16,#+16
+   \   0000000C   0xF930 0x5014      LDRSH    R5,[R0, R4, LSL #+1]
+   \   00000010   0x260A             MOVS     R6,#+10
+   \   00000012   0xFB15 0x3306      SMLABB   R3,R5,R6,R3
+    419              }
+   \   00000016   0x1C64             ADDS     R4,R4,#+1
+   \                     ??getSimpilfiedAverage_0: (+1)
+   \   00000018   0xB224             SXTH     R4,R4            ;; SignExt  R4,R4,#+16,#+16
+   \   0000001A   0x4294             CMP      R4,R2
+   \   0000001C   0xDBF5             BLT.N    ??getSimpilfiedAverage_1
+    420              sum = sum / (end - start);
+   \   0000001E   0x1A50             SUBS     R0,R2,R1
+   \   00000020   0xFB93 0xF3F0      SDIV     R3,R3,R0
+    421              
+    422              return (int16)sum; 
+   \   00000024   0x0018             MOVS     R0,R3
+   \   00000026   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000028   0xBC70             POP      {R4-R6}
+   \   0000002A   0x4770             BX       LR               ;; return
+    423          }
+    424          
+    425          //计算一组数据的简化方差，防止数据运算量过大
+
+   \                                 In section .text, align 2, keep-with-next
+    426          void getSimpilfiedVariance(int16 *data, int start,int end, int32* variance)
+    427          {
+   \                     getSimpilfiedVariance: (+1)
+   \   00000000   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \   00000004   0xB0A6             SUB      SP,SP,#+152
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x000D             MOVS     R5,R1
+   \   0000000A   0x0016             MOVS     R6,R2
+   \   0000000C   0x001F             MOVS     R7,R3
+    428              int32 varianceValue = 0;
+   \   0000000E   0xF05F 0x0800      MOVS     R8,#+0
+    429              int16 delt = 0;
+   \   00000012   0x2000             MOVS     R0,#+0
+    430              int16 loopi = 0;
+   \   00000014   0xF05F 0x0900      MOVS     R9,#+0
+    431              int16 averageNum = getSimpilfiedAverage(data, start,end);
+   \   00000018   0x0032             MOVS     R2,R6
+   \   0000001A   0x0029             MOVS     R1,R5
+   \   0000001C   0x0020             MOVS     R0,R4
+   \   0000001E   0x.... 0x....      BL       getSimpilfiedAverage
+    432          
+    433              int16 i16x[64];
+    434              int8 i8i;
+    435              float fa, fb;
+    436                  
+    437                  for (i8i=0; i8i<64; i8i++)
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xE005             B.N      ??getSimpilfiedVariance_0
+    438                  {       
+    439                      i16x[i8i] = i8i;       
+   \                     ??getSimpilfiedVariance_1: (+1)
+   \   00000026   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   00000028   0xA905             ADD      R1,SP,#+20
+   \   0000002A   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   0000002C   0xF821 0x0010      STRH     R0,[R1, R0, LSL #+1]
+    440                  }                 
+   \   00000030   0x1C40             ADDS     R0,R0,#+1
+   \                     ??getSimpilfiedVariance_0: (+1)
+   \   00000032   0xB240             SXTB     R0,R0            ;; SignExt  R0,R0,#+24,#+24
+   \   00000034   0x2840             CMP      R0,#+64
+   \   00000036   0xDBF6             BLT.N    ??getSimpilfiedVariance_1
+    441                  
+    442                  LinerFit(&(i16x[start]), &(data[start]), end-start, &fa, &fb, NULL, NULL);  
+   \   00000038   0x2000             MOVS     R0,#+0
+   \   0000003A   0x9002             STR      R0,[SP, #+8]
+   \   0000003C   0x2000             MOVS     R0,#+0
+   \   0000003E   0x9001             STR      R0,[SP, #+4]
+   \   00000040   0xA803             ADD      R0,SP,#+12
+   \   00000042   0x9000             STR      R0,[SP, #+0]
+   \   00000044   0xAB04             ADD      R3,SP,#+16
+   \   00000046   0x1B72             SUBS     R2,R6,R5
+   \   00000048   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000004A   0xEB04 0x0145      ADD      R1,R4,R5, LSL #+1
+   \   0000004E   0xA805             ADD      R0,SP,#+20
+   \   00000050   0xEB00 0x0045      ADD      R0,R0,R5, LSL #+1
+   \   00000054   0x.... 0x....      BL       LinerFit
+    443                  //i16ColTemp = (int16)(i8i*fa + fb);
+    444              
+    445              
+    446              for(loopi = start; loopi < end; loopi ++)
+   \   00000058   0x46A9             MOV      R9,R5
+   \   0000005A   0xE01D             B.N      ??getSimpilfiedVariance_2
+    447              {
+    448                  delt = 10 * (data[loopi] - (int16)(loopi*fa + fb));
+   \                     ??getSimpilfiedVariance_3: (+1)
+   \   0000005C   0xFA0F 0xF989      SXTH     R9,R9            ;; SignExt  R9,R9,#+16,#+16
+   \   00000060   0xF834 0xA019      LDRH     R10,[R4, R9, LSL #+1]
+   \   00000064   0xFA0F 0xF989      SXTH     R9,R9            ;; SignExt  R9,R9,#+16,#+16
+   \   00000068   0x4648             MOV      R0,R9
+   \   0000006A   0x.... 0x....      BL       __aeabi_i2f
+   \   0000006E   0x9904             LDR      R1,[SP, #+16]
+   \   00000070   0x.... 0x....      BL       __aeabi_fmul
+   \   00000074   0x9903             LDR      R1,[SP, #+12]
+   \   00000076   0x.... 0x....      BL       __aeabi_fadd
+   \   0000007A   0x.... 0x....      BL       __aeabi_f2iz
+   \   0000007E   0xEBBA 0x0000      SUBS     R0,R10,R0
+   \   00000082   0x210A             MOVS     R1,#+10
+   \   00000084   0xFB10 0xF001      SMULBB   R0,R0,R1
+    449                  varianceValue = varianceValue + (power(delt, 2));
+   \   00000088   0x2102             MOVS     R1,#+2
+   \   0000008A   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000008C   0x.... 0x....      BL       power
+   \   00000090   0xEB10 0x0808      ADDS     R8,R0,R8
+    450              }
+   \   00000094   0xF119 0x0901      ADDS     R9,R9,#+1
+   \                     ??getSimpilfiedVariance_2: (+1)
+   \   00000098   0xFA0F 0xF989      SXTH     R9,R9            ;; SignExt  R9,R9,#+16,#+16
+   \   0000009C   0x45B1             CMP      R9,R6
+   \   0000009E   0xDBDD             BLT.N    ??getSimpilfiedVariance_3
+    451              *variance = varianceValue / (end - start) / 10;
+   \   000000A0   0x1B70             SUBS     R0,R6,R5
+   \   000000A2   0xFB98 0xF0F0      SDIV     R0,R8,R0
+   \   000000A6   0x210A             MOVS     R1,#+10
+   \   000000A8   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   000000AC   0x6038             STR      R0,[R7, #+0]
+    452          }
+   \   000000AE   0xB026             ADD      SP,SP,#+152
+   \   000000B0   0xE8BD 0x87F0      POP      {R4-R10,PC}      ;; return
+    453          /*void getVariance(int16* data,int start,int end,int32* variance)
+    454          {
+    455            int i,sum = 0;
+    456            int32 average = 0;
+    457            int32 average_sum = 0;
+    458            
+    459            sum  = end - start;
+    460            
+    461            for(i=start;i<end;i++)
+    462            {
+    463          	  average = average + data[i];
+    464          	  average_sum = average_sum + data[i] * data[i];
+    465            }
+    466            
+    467            average = average/sum;
+    468            *variance = average_sum/sum - average*average;
+    469            
+    470          }*/
+    471          
+
+   \                                 In section .data, align 4
+    472          int16 i16ArctanTable_1[50] = 
+   \                     i16ArctanTable_1:
+   \   00000000   0x0000 0x000B      DC16 0, 11, 23, 34, 46, 57, 68, 80, 91, 102, 113, 124, 135, 146, 156
+   \              0x0017 0x0022
+   \              0x002E 0x0039
+   \              0x0044 0x0050
+   \              0x005B 0x0066
+   \              0x0071 0x007C
+   \              0x0087 0x0092
+   \              0x009C       
+   \   0000001E   0x00A7 0x00B1      DC16 167, 177, 188, 198, 208, 218, 228, 237, 247, 256, 266, 275, 284
+   \              0x00BC 0x00C6
+   \              0x00D0 0x00DA
+   \              0x00E4 0x00ED
+   \              0x00F7 0x0100
+   \              0x010A 0x0113
+   \              0x011C       
+   \   00000038   0x0124 0x012D      DC16 292, 301, 310, 318, 326, 334, 342, 350, 358, 365, 372, 380, 387
+   \              0x0136 0x013E
+   \              0x0146 0x014E
+   \              0x0156 0x015E
+   \              0x0166 0x016D
+   \              0x0174 0x017C
+   \              0x0183       
+   \   00000052   0x018A 0x0190      DC16 394, 400, 407, 413, 420, 426, 432, 438, 444
+   \              0x0197 0x019D
+   \              0x01A4 0x01AA
+   \              0x01B0 0x01B6
+   \              0x01BC       
+    473          {
+    474          0,
+    475          11,
+    476          23,
+    477          34,
+    478          46,
+    479          57,
+    480          68,
+    481          80,
+    482          91,
+    483          102,
+    484          113,
+    485          124,
+    486          135,
+    487          146,
+    488          156,
+    489          167,
+    490          177,
+    491          188,
+    492          198,
+    493          208,
+    494          218,
+    495          228,
+    496          237,
+    497          247,
+    498          256,
+    499          266,
+    500          275,
+    501          284,
+    502          292,
+    503          301,
+    504          310,
+    505          318,
+    506          326,
+    507          334,
+    508          342,
+    509          350,
+    510          358,
+    511          365,
+    512          372,
+    513          380,
+    514          387,
+    515          394,
+    516          400,
+    517          407,
+    518          413,
+    519          420,
+    520          426,
+    521          432,
+    522          438,
+    523          444
+    524          };
+    525          
+    526          
+
+   \                                 In section .data, align 4
+    527          int16 i16ArctanTable_2[30] = 
+   \                     i16ArctanTable_2:
+   \   00000000   0x01C2 0x01DD      DC16 450, 477, 502, 524, 545, 563, 580, 595, 609, 622, 634, 645, 656
+   \              0x01F6 0x020C
+   \              0x0221 0x0233
+   \              0x0244 0x0253
+   \              0x0261 0x026E
+   \              0x027A 0x0285
+   \              0x0290       
+   \   0000001A   0x0299 0x02A2      DC16 665, 674, 682, 690, 697, 703, 710, 716, 721, 726, 731, 736, 741
+   \              0x02AA 0x02B2
+   \              0x02B9 0x02BF
+   \              0x02C6 0x02CC
+   \              0x02D1 0x02D6
+   \              0x02DB 0x02E0
+   \              0x02E5       
+   \   00000034   0x02E9 0x02ED      DC16 745, 749, 753, 756
+   \              0x02F1 0x02F4
+    528          {
+    529          450,
+    530          477,
+    531          502,
+    532          524,
+    533          545,
+    534          563,
+    535          580,
+    536          595,
+    537          609,
+    538          622,
+    539          634,
+    540          645,
+    541          656,
+    542          665,
+    543          674,
+    544          682,
+    545          690,
+    546          697,
+    547          703,
+    548          710,
+    549          716,
+    550          721,
+    551          726,
+    552          731,
+    553          736,
+    554          741,
+    555          745,
+    556          749,
+    557          753,
+    558          756 
+    559          };
+    560          
+
+   \                                 In section .data, align 4
+    561          int16 i16ArctanTable_3[10] = 
+   \                     i16ArctanTable_3:
+   \   00000000   0x02F8 0x0304      DC16 760, 772, 782, 791, 799, 805, 811, 816, 821, 825
+   \              0x030E 0x0317
+   \              0x031F 0x0325
+   \              0x032B 0x0330
+   \              0x0335 0x0339
+    562          {
+    563          760,
+    564          772,
+    565          782,
+    566          791,
+    567          799,
+    568          805,
+    569          811,
+    570          816,
+    571          821,
+    572          825
+    573          };
+    574          
+
+   \                                 In section .data, align 4
+    575          int16 i16ArctanTable_4[11] = 
+   \                     i16ArctanTable_4:
+   \   00000000   0x033D 0x0345      DC16 829, 837, 843, 848, 852, 856, 859, 862, 864, 866, 868
+   \              0x034B 0x0350
+   \              0x0354 0x0358
+   \              0x035B 0x035E
+   \              0x0360 0x0362
+   \              0x0364       
+   \   00000016   0x00 0x00          DC8 0, 0
+    576          {
+    577          829,
+    578          837,
+    579          843,
+    580          848,
+    581          852,
+    582          856,
+    583          859,
+    584          862,
+    585          864,
+    586          866,
+    587          868
+    588          };
+    589          
+    590          //查表法算角度
+
+   \                                 In section .text, align 2, keep-with-next
+    591          int16 _100aToPointAngle(int32 i32_100a)
+    592          {
+    593              int16 i16Angle = 0;
+   \                     _100aToPointAngle: (+1)
+   \   00000000   0x2200             MOVS     R2,#+0
+    594              int8 i8Sign = 1;
+   \   00000002   0x2101             MOVS     R1,#+1
+    595              uint8 u8Index = 0;
+   \   00000004   0x2200             MOVS     R2,#+0
+    596              
+    597              if (i32_100a < 0)
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD502             BPL.N    ??_100aToPointAngle_0
+    598              {
+    599                  i8Sign = -1;
+   \   0000000A   0xF05F 0x31FF      MOVS     R1,#-1
+    600                  i32_100a = -i32_100a;
+   \   0000000E   0x4240             RSBS     R0,R0,#+0
+    601              }
+    602              
+    603              if (i32_100a < 100)
+   \                     ??_100aToPointAngle_0: (+1)
+   \   00000010   0x2864             CMP      R0,#+100
+   \   00000012   0xDA07             BGE.N    ??_100aToPointAngle_1
+    604              {
+    605                  u8Index = i32_100a / 2;
+   \   00000014   0x2202             MOVS     R2,#+2
+   \   00000016   0xFB90 0xF2F2      SDIV     R2,R0,R2
+    606                  i16Angle = i16ArctanTable_1[u8Index];
+   \   0000001A   0x....             LDR.N    R0,??DataTable6_12
+   \   0000001C   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000001E   0xF930 0x2012      LDRSH    R2,[R0, R2, LSL #+1]
+   \   00000022   0xE028             B.N      ??_100aToPointAngle_2
+    607              }
+    608              else if (i32_100a < 400)
+   \                     ??_100aToPointAngle_1: (+1)
+   \   00000024   0xF5B0 0x7FC8      CMP      R0,#+400
+   \   00000028   0xDA08             BGE.N    ??_100aToPointAngle_3
+    609              {
+    610                  u8Index = (i32_100a-100) / 10;
+   \   0000002A   0x3864             SUBS     R0,R0,#+100
+   \   0000002C   0x220A             MOVS     R2,#+10
+   \   0000002E   0xFB90 0xF2F2      SDIV     R2,R0,R2
+    611                  i16Angle = i16ArctanTable_2[u8Index];               
+   \   00000032   0x....             LDR.N    R0,??DataTable6_13
+   \   00000034   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000036   0xF930 0x2012      LDRSH    R2,[R0, R2, LSL #+1]
+   \   0000003A   0xE01C             B.N      ??_100aToPointAngle_2
+    612              }
+    613              else if (i32_100a < 800)
+   \                     ??_100aToPointAngle_3: (+1)
+   \   0000003C   0xF5B0 0x7F48      CMP      R0,#+800
+   \   00000040   0xDA09             BGE.N    ??_100aToPointAngle_4
+    614              {
+    615                  u8Index = (i32_100a-400) / 40;
+   \   00000042   0xF5B0 0x70C8      SUBS     R0,R0,#+400
+   \   00000046   0x2228             MOVS     R2,#+40
+   \   00000048   0xFB90 0xF2F2      SDIV     R2,R0,R2
+    616                  i16Angle = i16ArctanTable_3[u8Index];               
+   \   0000004C   0x....             LDR.N    R0,??DataTable6_14
+   \   0000004E   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000050   0xF930 0x2012      LDRSH    R2,[R0, R2, LSL #+1]
+   \   00000054   0xE00F             B.N      ??_100aToPointAngle_2
+    617              }   
+    618              else if (i32_100a < 1800)
+   \                     ??_100aToPointAngle_4: (+1)
+   \   00000056   0xF5B0 0x6FE1      CMP      R0,#+1800
+   \   0000005A   0xDA09             BGE.N    ??_100aToPointAngle_5
+    619              {
+    620                  u8Index = (i32_100a-800) / 100;
+   \   0000005C   0xF5B0 0x7048      SUBS     R0,R0,#+800
+   \   00000060   0x2264             MOVS     R2,#+100
+   \   00000062   0xFB90 0xF2F2      SDIV     R2,R0,R2
+    621                  i16Angle = i16ArctanTable_4[u8Index];          
+   \   00000066   0x....             LDR.N    R0,??DataTable6_15
+   \   00000068   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000006A   0xF930 0x2012      LDRSH    R2,[R0, R2, LSL #+1]
+   \   0000006E   0xE002             B.N      ??_100aToPointAngle_2
+    622              }
+    623              else
+    624              {
+    625                  i16Angle = i16ArctanTable_4[10];
+   \                     ??_100aToPointAngle_5: (+1)
+   \   00000070   0x....             LDR.N    R0,??DataTable6_15
+   \   00000072   0xF9B0 0x2014      LDRSH    R2,[R0, #+20]
+    626              }
+    627              
+    628              return (i16Angle*i8Sign);
+   \                     ??_100aToPointAngle_2: (+1)
+   \   00000076   0xB249             SXTB     R1,R1            ;; SignExt  R1,R1,#+24,#+24
+   \   00000078   0xFB12 0xF001      SMULBB   R0,R2,R1
+   \   0000007C   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000007E   0x4770             BX       LR               ;; return
+    629              
+    630          }
+    631          
+
+   \                                 In section .text, align 2, keep-with-next
+    632          float GP_tan(float x)
+    633          {
+   \                     GP_tan: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0006             MOVS     R6,R0
+    634              return (x + x*x*x/3.0 + x*x*x*x*x/5.0);
+   \   00000004   0x0030             MOVS     R0,R6
+   \   00000006   0x.... 0x....      BL       __aeabi_f2d
+   \   0000000A   0x0004             MOVS     R4,R0
+   \   0000000C   0x000D             MOVS     R5,R1
+   \   0000000E   0x0030             MOVS     R0,R6
+   \   00000010   0x0031             MOVS     R1,R6
+   \   00000012   0x.... 0x....      BL       __aeabi_fmul
+   \   00000016   0x0031             MOVS     R1,R6
+   \   00000018   0x.... 0x....      BL       __aeabi_fmul
+   \   0000001C   0x.... 0x....      BL       __aeabi_f2d
+   \   00000020   0x2200             MOVS     R2,#+0
+   \   00000022   0x....             LDR.N    R3,??DataTable6_16  ;; 0x40080000
+   \   00000024   0x.... 0x....      BL       __aeabi_ddiv
+   \   00000028   0x0022             MOVS     R2,R4
+   \   0000002A   0x002B             MOVS     R3,R5
+   \   0000002C   0x.... 0x....      BL       __aeabi_dadd
+   \   00000030   0x0004             MOVS     R4,R0
+   \   00000032   0x000D             MOVS     R5,R1
+   \   00000034   0x0030             MOVS     R0,R6
+   \   00000036   0x0031             MOVS     R1,R6
+   \   00000038   0x.... 0x....      BL       __aeabi_fmul
+   \   0000003C   0x0031             MOVS     R1,R6
+   \   0000003E   0x.... 0x....      BL       __aeabi_fmul
+   \   00000042   0x0031             MOVS     R1,R6
+   \   00000044   0x.... 0x....      BL       __aeabi_fmul
+   \   00000048   0x0031             MOVS     R1,R6
+   \   0000004A   0x.... 0x....      BL       __aeabi_fmul
+   \   0000004E   0x.... 0x....      BL       __aeabi_f2d
+   \   00000052   0x2200             MOVS     R2,#+0
+   \   00000054   0x....             LDR.N    R3,??DataTable6_17  ;; 0x40140000
+   \   00000056   0x.... 0x....      BL       __aeabi_ddiv
+   \   0000005A   0x0022             MOVS     R2,R4
+   \   0000005C   0x002B             MOVS     R3,R5
+   \   0000005E   0x.... 0x....      BL       __aeabi_dadd
+   \   00000062   0x.... 0x....      BL       __aeabi_d2f
+   \   00000066   0xBD70             POP      {R4-R6,PC}       ;; return
+    635          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \   00000000   0x40A00000         DC32     0x40a00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_1:
+   \   00000000   0x........         DC32     `least_squares_value::s_first_flag`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_2:
+   \   00000000   0x........         DC32     `least_squares_value::s_x_value`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_3:
+   \   00000000   0x........         DC32     `least_squares_value::s_x_sum_average`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_4:
+   \   00000000   0x........         DC32     `least_squares_value::s_x_square_sum`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_5:
+   \   00000000   0x........         DC32     `least_squares_value::s_y_value`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_6:
+   \   00000000   0xBF800000         DC32     0xbf800000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_7:
+   \   00000000   0x........         DC32     gul_time_100us
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_8:
+   \   00000000   0x........         DC32     `sleep_ms::flag`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_9:
+   \   00000000   0x........         DC32     `sleep_ms::time_set`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_10:
+   \   00000000   0x........         DC32     `sleep_ms::u8_is_timeup`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_11:
+   \   00000000   0x........         DC32     `time_100us::time_temp`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_12:
+   \   00000000   0x........         DC32     i16ArctanTable_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_13:
+   \   00000000   0x........         DC32     i16ArctanTable_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_14:
+   \   00000000   0x........         DC32     i16ArctanTable_3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_15:
+   \   00000000   0x........         DC32     i16ArctanTable_4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_16:
+   \   00000000   0x40080000         DC32     0x40080000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_17:
+   \   00000000   0x40140000         DC32     0x40140000
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   Average
+        16   -> Sigma
+        16   -> __aeabi_fdiv
+        16   -> __aeabi_i2f
+        16   -> __aeabi_ui2f
+       0   Delay_ms
+      16   GP_tan
+        16   -> __aeabi_d2f
+        16   -> __aeabi_dadd
+        16   -> __aeabi_ddiv
+        16   -> __aeabi_f2d
+        16   -> __aeabi_fmul
+       8   Limiter
+         8 __aeabi_cfcmple
+      48   LinerFit
+        48   -> Average
+        48   -> Sigma
+        48   -> SigmaXX
+        48   -> SigmaXY
+        48   -> __aeabi_d2f
+        48   -> __aeabi_ddiv
+        48   -> __aeabi_dmul
+        48   -> __aeabi_fmul
+        48   -> __aeabi_fsub
+        48   -> __aeabi_i2d
+        48 __aeabi_cfcmpeq
+       8   Sigma
+       8   SigmaXX
+      12   SigmaXY
+       0   _100aToPointAngle
+      12   getSimpilfiedAverage
+     184   getSimpilfiedVariance
+       184   -> LinerFit
+       184   -> __aeabi_f2iz
+       184   -> __aeabi_fadd
+       184   -> __aeabi_fmul
+       184   -> __aeabi_i2f
+       184   -> getSimpilfiedAverage
+       184   -> power
+      56   least_spuare
+        56   -> __aeabi_d2f
+        56   -> __aeabi_dmul
+        56   -> __aeabi_f2d
+        56   -> __aeabi_fdiv
+        56   -> __aeabi_fmul
+        56   -> __aeabi_fsub
+        56   -> __aeabi_i2f
+        56   -> sqrt
+        56 __aeabi_cfcmpeq
+      16   least_squares_value
+        16   -> __aeabi_f2iz
+        16   -> __aeabi_fadd
+        16   -> __aeabi_fdiv
+        16   -> __aeabi_fmul
+        16   -> __aeabi_fsub
+        16   -> multiplied_sum
+        16   -> squre_sum
+        16   -> sum_average
+      24   multiplied_sum
+        24   -> __aeabi_fadd
+        24   -> __aeabi_i2f
+       8   power
+       4   sleep_ms
+      16   squre_sum
+        16   -> __aeabi_fadd
+        16   -> __aeabi_i2f
+      16   sum_average
+        16   -> __aeabi_fadd
+        16   -> __aeabi_fdiv
+        16   -> __aeabi_i2f
+       0   time_100us
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_10
+       4  ??DataTable6_11
+       4  ??DataTable6_12
+       4  ??DataTable6_13
+       4  ??DataTable6_14
+       4  ??DataTable6_15
+       4  ??DataTable6_16
+       4  ??DataTable6_17
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable6_5
+       4  ??DataTable6_6
+       4  ??DataTable6_7
+       4  ??DataTable6_8
+       4  ??DataTable6_9
+      36  Average
+      42  Delay_ms
+     104  GP_tan
+      38  Limiter
+     406  LinerFit
+      38  Sigma
+      48  SigmaXX
+      48  SigmaXY
+     128  _100aToPointAngle
+       1  flag
+      44  getSimpilfiedAverage
+     180  getSimpilfiedVariance
+     100  i16ArctanTable_1
+      60  i16ArctanTable_2
+      20  i16ArctanTable_3
+      24  i16ArctanTable_4
+     434  least_spuare
+     260  least_squares_value
+      54  multiplied_sum
+      34  power
+       1  s_first_flag
+       4  s_x_square_sum
+       4  s_x_sum_average
+      12  s_x_value
+      12  s_y_value
+     158  sleep_ms
+      52  squre_sum
+      54  sum_average
+      38  time_100us
+      40  time_set
+      40  time_temp
+      12  u8_is_timeup
+
+ 
+   125 bytes in section .bss
+   205 bytes in section .data
+ 2 268 bytes in section .text
+ 
+ 2 268 bytes of CODE memory
+   330 bytes of DATA memory
+
+Errors: none
+Warnings: none

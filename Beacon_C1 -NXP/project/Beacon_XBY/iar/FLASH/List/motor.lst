@@ -1,0 +1,382 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       27/Jul/2018  20:43:48
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\src\motor.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\src\motor.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\motor.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\motor.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\motor.c
+      1          #include "include.h"
+      2          
+      3          #define LEFT_K 1.00
+      4          #define RIGHT_K 1.00
+      5          
+
+   \                                 In section .data, align 4
+      6          float gl_motor_left_k = LEFT_K;
+   \                     gl_motor_left_k:
+   \   00000000   0x3F800000         DC32 3F800000H
+
+   \                                 In section .data, align 4
+      7          float gl_motor_right_k = RIGHT_K;
+   \                     gl_motor_right_k:
+   \   00000000   0x3F800000         DC32 3F800000H
+      8          
+
+   \                                 In section .text, align 2, keep-with-next
+      9          void Motor_Init()
+     10          { 
+   \                     Motor_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     11              Motor_PWM_Init();
+   \   00000002   0x.... 0x....      BL       Motor_PWM_Init
+     12                 
+     13              //控制方向的引脚
+     14              GPIO_Init(RIGHT_MOTOR_DIR_PORT, RIGHT_MOTOR_DIR_PIN_MASK, DIR_OUTPUT, RIGHT_MOTOR_FORWARD_LV);
+   \   00000006   0x2300             MOVS     R3,#+0
+   \   00000008   0x2201             MOVS     R2,#+1
+   \   0000000A   0x2104             MOVS     R1,#+4
+   \   0000000C   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   0000000E   0x.... 0x....      BL       GPIO_Init
+     15              GPIO_Init(LEFT_MOTOR_DIR_PORT, LEFT_MOTOR_DIR_PIN_MASK, DIR_OUTPUT, LEFT_MOTOR_FORWARD_LV);
+   \   00000012   0x2300             MOVS     R3,#+0
+   \   00000014   0x2201             MOVS     R2,#+1
+   \   00000016   0x2110             MOVS     R1,#+16
+   \   00000018   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   0000001A   0x.... 0x....      BL       GPIO_Init
+     16          }
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+     17          
+
+   \                                 In section .text, align 2, keep-with-next
+     18          void Set_Motor_PWM(int16 i16MotorPWM, uint8 u8MotorSele)//PWM正为正转，否则反转
+     19          {
+   \                     Set_Motor_PWM: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     20              if (u8MotorSele == LEFT_MOTOR)//左电机
+   \   00000002   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000004   0x2900             CMP      R1,#+0
+   \   00000006   0xD11C             BNE.N    ??Set_Motor_PWM_0
+     21              {
+     22                  if (i16MotorPWM > 0)
+   \   00000008   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000000A   0x2801             CMP      R0,#+1
+   \   0000000C   0xDB08             BLT.N    ??Set_Motor_PWM_1
+     23                  {
+     24                      Change_PWM_Motor_Left(i16MotorPWM);
+   \   0000000E   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000010   0x.... 0x....      BL       Change_PWM_Motor_Left
+     25                      LPLD_GPIO_Output_b(LEFT_MOTOR_DIR_PORT, LEFT_MOTOR_DIR_PIN, LEFT_MOTOR_FORWARD_LV);
+   \   00000014   0x2200             MOVS     R2,#+0
+   \   00000016   0x2104             MOVS     R1,#+4
+   \   00000018   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   0000001A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   0000001E   0xE02C             B.N      ??Set_Motor_PWM_2
+     26                  }
+     27                  else if (i16MotorPWM < 0)
+   \                     ??Set_Motor_PWM_1: (+1)
+   \   00000020   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000022   0x2800             CMP      R0,#+0
+   \   00000024   0xD509             BPL.N    ??Set_Motor_PWM_3
+     28                  {
+     29                      Change_PWM_Motor_Left(-i16MotorPWM);
+   \   00000026   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000028   0x4240             RSBS     R0,R0,#+0
+   \   0000002A   0x.... 0x....      BL       Change_PWM_Motor_Left
+     30                      LPLD_GPIO_Output_b(LEFT_MOTOR_DIR_PORT, LEFT_MOTOR_DIR_PIN, LEFT_MOTOR_BACKWARD_LV);
+   \   0000002E   0x2201             MOVS     R2,#+1
+   \   00000030   0x2104             MOVS     R1,#+4
+   \   00000032   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   00000034   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000038   0xE01F             B.N      ??Set_Motor_PWM_2
+     31                  }
+     32                  else
+     33                  {
+     34                      Change_PWM_Motor_Left(0);
+   \                     ??Set_Motor_PWM_3: (+1)
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x.... 0x....      BL       Change_PWM_Motor_Left
+   \   00000040   0xE01B             B.N      ??Set_Motor_PWM_2
+     35                  }
+     36              }
+     37              else//右电机
+     38              {
+     39                  if (i16MotorPWM > 0)
+   \                     ??Set_Motor_PWM_0: (+1)
+   \   00000042   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000044   0x2801             CMP      R0,#+1
+   \   00000046   0xDB08             BLT.N    ??Set_Motor_PWM_4
+     40                  {
+     41                      Change_PWM_Motor_Right(i16MotorPWM);
+   \   00000048   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000004A   0x.... 0x....      BL       Change_PWM_Motor_Right
+     42                      LPLD_GPIO_Output_b(RIGHT_MOTOR_DIR_PORT, RIGHT_MOTOR_DIR_PIN, RIGHT_MOTOR_FORWARD_LV);
+   \   0000004E   0x2200             MOVS     R2,#+0
+   \   00000050   0x2102             MOVS     R1,#+2
+   \   00000052   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   00000054   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000058   0xE00F             B.N      ??Set_Motor_PWM_2
+     43                  }
+     44                  else if (i16MotorPWM < 0)
+   \                     ??Set_Motor_PWM_4: (+1)
+   \   0000005A   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   0000005C   0x2800             CMP      R0,#+0
+   \   0000005E   0xD509             BPL.N    ??Set_Motor_PWM_5
+     45                  {
+     46                      Change_PWM_Motor_Right(-i16MotorPWM);
+   \   00000060   0xB200             SXTH     R0,R0            ;; SignExt  R0,R0,#+16,#+16
+   \   00000062   0x4240             RSBS     R0,R0,#+0
+   \   00000064   0x.... 0x....      BL       Change_PWM_Motor_Right
+     47                      LPLD_GPIO_Output_b(RIGHT_MOTOR_DIR_PORT, RIGHT_MOTOR_DIR_PIN, RIGHT_MOTOR_BACKWARD_LV);
+   \   00000068   0x2201             MOVS     R2,#+1
+   \   0000006A   0x2102             MOVS     R1,#+2
+   \   0000006C   0x....             LDR.N    R0,??DataTable4  ;; 0x400ff080
+   \   0000006E   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000072   0xE002             B.N      ??Set_Motor_PWM_2
+     48                  }
+     49                  else
+     50                  {
+     51                      Change_PWM_Motor_Right(0);
+   \                     ??Set_Motor_PWM_5: (+1)
+   \   00000074   0x2000             MOVS     R0,#+0
+   \   00000076   0x.... 0x....      BL       Change_PWM_Motor_Right
+     52                  }
+     53              }	
+     54          }
+   \                     ??Set_Motor_PWM_2: (+1)
+   \   0000007A   0xBD01             POP      {R0,PC}          ;; return
+     55          
+     56          //电机输出
+
+   \                                 In section .text, align 2, keep-with-next
+     57          void Motor_Output()
+     58          {
+   \                     Motor_Output: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     59              int16 i16CarLeftPWM;
+     60              int16 i16CarRightPWM;
+     61            
+     62              Speed_PWM_Delta(&i16CarLeftPWM ,&i16CarRightPWM ,gl_pwm_out);
+   \   00000002   0x....             LDR.N    R0,??DataTable4_1
+   \   00000004   0x6802             LDR      R2,[R0, #+0]
+   \   00000006   0x4669             MOV      R1,SP
+   \   00000008   0xF10D 0x0002      ADD      R0,SP,#+2
+   \   0000000C   0x.... 0x....      BL       Speed_PWM_Delta
+     63              
+     64              //gl_div_pwm_set = gl_direction_set;
+     65                  
+     66          //    i16CarLeftPWM = gl_pwm_out; //+ gl_div_pwm_out;
+     67          //    i16CarRightPWM = gl_pwm_out; //- gl_div_pwm_out;
+     68                
+     69              //需要乘系数
+     70              //限幅
+     71              i16CarLeftPWM = (int16)Limiter(i16CarLeftPWM, -MAX_MOTOR_PWM, MAX_MOTOR_PWM);
+   \   00000010   0x....             LDR.N    R2,??DataTable4_2  ;; 0x45fa0000
+   \   00000012   0x....             LDR.N    R1,??DataTable4_3  ;; 0xc5fa0000
+   \   00000014   0x000C             MOVS     R4,R1
+   \   00000016   0x0015             MOVS     R5,R2
+   \   00000018   0xF9BD 0x0002      LDRSH    R0,[SP, #+2]
+   \   0000001C   0x.... 0x....      BL       __aeabi_i2f
+   \   00000020   0x002A             MOVS     R2,R5
+   \   00000022   0x0021             MOVS     R1,R4
+   \   00000024   0x.... 0x....      BL       Limiter
+   \   00000028   0x.... 0x....      BL       __aeabi_f2iz
+   \   0000002C   0xF8AD 0x0002      STRH     R0,[SP, #+2]
+     72              i16CarRightPWM = (int16)Limiter(i16CarRightPWM, -MAX_MOTOR_PWM, MAX_MOTOR_PWM);       
+   \   00000030   0x....             LDR.N    R2,??DataTable4_2  ;; 0x45fa0000
+   \   00000032   0x....             LDR.N    R1,??DataTable4_3  ;; 0xc5fa0000
+   \   00000034   0x000C             MOVS     R4,R1
+   \   00000036   0x0015             MOVS     R5,R2
+   \   00000038   0xF9BD 0x0000      LDRSH    R0,[SP, #+0]
+   \   0000003C   0x.... 0x....      BL       __aeabi_i2f
+   \   00000040   0x002A             MOVS     R2,R5
+   \   00000042   0x0021             MOVS     R1,R4
+   \   00000044   0x.... 0x....      BL       Limiter
+   \   00000048   0x.... 0x....      BL       __aeabi_f2iz
+   \   0000004C   0xF8AD 0x0000      STRH     R0,[SP, #+0]
+     73              
+     74              if(guc_car_run_flag == CAR_STOP)
+   \   00000050   0x....             LDR.N    R0,??DataTable4_4
+   \   00000052   0x7800             LDRB     R0,[R0, #+0]
+   \   00000054   0x2800             CMP      R0,#+0
+   \   00000056   0xD106             BNE.N    ??Motor_Output_0
+     75              {
+     76                  i16CarLeftPWM = i16CarRightPWM = 0;
+   \   00000058   0x2000             MOVS     R0,#+0
+   \   0000005A   0xF8AD 0x0000      STRH     R0,[SP, #+0]
+   \   0000005E   0xF8BD 0x0000      LDRH     R0,[SP, #+0]
+   \   00000062   0xF8AD 0x0002      STRH     R0,[SP, #+2]
+     77              }
+     78              
+     79              Set_Motor_PWM(i16CarLeftPWM, LEFT_MOTOR);            
+   \                     ??Motor_Output_0: (+1)
+   \   00000066   0x2100             MOVS     R1,#+0
+   \   00000068   0xF9BD 0x0002      LDRSH    R0,[SP, #+2]
+   \   0000006C   0x.... 0x....      BL       Set_Motor_PWM
+     80              Set_Motor_PWM(i16CarRightPWM, RIGHT_MOTOR);  
+   \   00000070   0x2101             MOVS     R1,#+1
+   \   00000072   0xF9BD 0x0000      LDRSH    R0,[SP, #+0]
+   \   00000076   0x.... 0x....      BL       Set_Motor_PWM
+     81          }
+   \   0000007A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+     82          void CarStop()
+     83          {
+     84              guc_car_run_flag = CAR_STOP;
+   \                     CarStop: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR.N    R1,??DataTable4_4
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+     85          }
+   \   00000006   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+     86          void CarRestart()
+     87          {
+     88              guc_car_run_flag = CAR_RUN ;
+   \                     CarRestart: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR.N    R1,??DataTable4_4
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+     89          }
+   \   00000006   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x400FF080         DC32     0x400ff080
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0x........         DC32     gl_pwm_out
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \   00000000   0x45FA0000         DC32     0x45fa0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_3:
+   \   00000000   0xC5FA0000         DC32     0xc5fa0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_4:
+   \   00000000   0x........         DC32     guc_car_run_flag
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   CarRestart
+       0   CarStop
+       8   Motor_Init
+         8   -> GPIO_Init
+         8   -> Motor_PWM_Init
+      16   Motor_Output
+        16   -> Limiter
+        16   -> Set_Motor_PWM
+        16   -> Speed_PWM_Delta
+        16   -> __aeabi_f2iz
+        16   -> __aeabi_i2f
+       8   Set_Motor_PWM
+         8   -> Change_PWM_Motor_Left
+         8   -> Change_PWM_Motor_Right
+         8   -> LPLD_GPIO_Output_b
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+       4  ??DataTable4_3
+       4  ??DataTable4_4
+       8  CarRestart
+       8  CarStop
+      32  Motor_Init
+     124  Motor_Output
+     124  Set_Motor_PWM
+       4  gl_motor_left_k
+       4  gl_motor_right_k
+
+ 
+   8 bytes in section .data
+ 316 bytes in section .text
+ 
+ 316 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

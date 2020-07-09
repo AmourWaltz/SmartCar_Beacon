@@ -1,0 +1,108 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[PEMICRODriver]
+PEM_LeaveTargetRunning=0x00000001
+[DebugChecksum]
+Checksum=158473855
+[PE_STARTUP]
+CPUTARGETTYPENAME=_ "ARM Processor - Autodetect"
+USE_CYCLONEPRO_RELAYS=_ "0"
+CyclonePro_poweroffonexit=_ "0"
+CyclonePro_currentvoltage=_ "128"
+CyclonePro_PowerDownDelay=_ "250"
+CyclonePro_PowerUpDelay=_ "250"
+Multilink_PowerDownDelay=_ "250"
+Multilink_PowerUpDelay=_ "1000"
+USE_SWD=_ "1"
+IO_DELAY_CNT=_ "0"
+FREQ_FX=_ "4"
+FREQ_NORMAL=_ "0"
+FREQ_OSJTAG=_ "0"
+FREQ_CYCLONE=_ "3"
+FREQ_TRACELINK=_ "3"
+FREQ_LIGHTNING=_ "1"
+FREQ_OPENSDA=_ "3"
+RESET_DELAY=_ "0"
+PORT=_ "1"
+PORT_NAME_STRING=_ ""
+interface_selection=_ "1"
+TraceLink_MaxBufferSize=_ "1"
+SHOWDIALOG=_ "1"
+[CodeCoverage]
+Enabled=_ 0
+[JLinkDriver]
+CStepIntDis=_ 0
+LeaveTargetRunning=_ 0
+TraceBufferSize=0x00010000
+TraceStallIfFIFOFull=0x00000000
+TracePortSize=0x00000004
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[PE_STORED_DEVICES]
+device0=_ "NXP_K6x_K60DN512ZM10"
+[PE_PEDEBUG]
+CURRENTDEVICE=_ "NXP_K6x_K60DN512ZM10"
+ERASE_PROGRAM_WITHOUT_ASKING=_ "1"
+CURRENTMODE=_ "4"
+[PE_DEVICE]
+CHIPMODE=_ "NXP_K6x_K60DN512ZM10"
+[PE_SETTINGS]
+DEFAULT_SOURCE_PATH=_ "D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\pemicro\P&E"
+[PE_STARTUP12]
+show_hstep_assembly_details_new=_ "0"
+[PE_ARM]
+FILE1=_ ""
+BINTORAM=_ "1"
+BINTOFLASH=_ "0"
+BINTOFLASHDEFAULT=_ "0"
+GOTILMAINDEFAULTON=_ "1"
+KEEPCPROGOPEN=_ "0"
+[Breakpoints]
+Count=0
+[Trace1]
+Enabled=0
+ShowSource=1
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[DriverProfiling]
+Enabled=0
+Mode=1
+Graph=0
+Symbiont=0
+Exclusions=
+[CallStackLog]
+Enabled=0
+[CallStackStripe]
+ShowTiming=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\..\Beacon_C1}.56.3" 0 0 1 "" 0 "" 0
+Count=1
+[Aliases]
+A0=_ "D:\Freescale\信标\13thBeacon\lib\CPU\startup_K60.s" ""
+A1=_ "D:\Freescale\信标\13thBeacon\lib\LPLD\HW\HW_FLASH.c" ""
+A2=_ "D:\Freescale\信标\13thBeacon\lib\LPLD\HW\HW_FTM.c" ""
+A3=_ "D:\Freescale\信标\13thBeacon\lib\LPLD\HW\HW_GPIO.c" ""
+A4=_ "D:\Freescale\信标\13thBeacon\lib\LPLD\HW\HW_LPTMR.c" ""
+A5=_ "D:\Freescale\信标\13thBeacon\lib\LPLD\HW\HW_UART.c" ""
+Count=6
+SuppressDialog=1

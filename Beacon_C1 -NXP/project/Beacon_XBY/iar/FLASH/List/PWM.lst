@@ -1,0 +1,380 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       27/Jul/2018  20:43:48
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\PWM.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\PWM.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\PWM.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\PWM.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\src\PWM.c
+      1          #include "PWM.h"
+      2          #include "include.h"
+      3          
+      4          // 电机FTM模块信息定义
+
+   \                                 In section .bss, align 4
+      5          static FTM_InitTypeDef g_ftm_motor_struct;
+   \                     g_ftm_motor_struct:
+   \   00000000                      DS8 28
+
+   \                                 In section .bss, align 4
+      6          static FTM_InitTypeDef g_ftm_servo_struct;
+   \                     g_ftm_servo_struct:
+   \   00000000                      DS8 28
+      7          
+      8          // 输出PWM初始化
+
+   \                                 In section .text, align 2, keep-with-next
+      9          void Motor_PWM_Init(void)
+     10          {
+   \                     Motor_PWM_Init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     11              // 配置电机PWM参数
+     12          	g_ftm_motor_struct.FTM_Ftmx = PWM_MOTOR_FTM;		
+   \   00000002   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000004   0x....             LDR.N    R1,??DataTable4_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     13          	g_ftm_motor_struct.FTM_Mode = FTM_MODE_PWM;			//PWM模式
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable4_1
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     14          	g_ftm_motor_struct.FTM_PwmFreq = PWM_Motor_PER_1S;		//频率20000Hz
+   \   0000000E   0xF242 0x7010      MOVW     R0,#+10000
+   \   00000012   0x....             LDR.N    R1,??DataTable4_1
+   \   00000014   0x6088             STR      R0,[R1, #+8]
+     15          //	g_ftm_motor_struct.FTM_PwmDeadtimeCfg = PWM_MOTOR_DEADTIME;		//通道0和1插入死区
+     16          
+     17          	// 初始化FTM
+     18          	LPLD_FTM_Init(g_ftm_motor_struct);
+   \   00000016   0x....             LDR.N    R1,??DataTable4_1
+   \   00000018   0xB084             SUB      SP,SP,#+16
+   \   0000001A   0x4668             MOV      R0,SP
+   \   0000001C   0x221C             MOVS     R2,#+28
+   \   0000001E   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000022   0xBC0F             POP      {R0-R3}
+   \   00000024   0x.... 0x....      BL       LPLD_FTM_Init
+     19          
+     20          	// 左轮电机PWM使能
+     21          	LPLD_FTM_PWM_Enable(PWM_MOTOR_FTM, PWM_LEFT_MOTOR_CH, HALF_DUTY, PWM_LEFT_MOTOR_PIN, ALIGN_LEFT);//单极性PWM要为0
+   \   00000028   0x2028             MOVS     R0,#+40
+   \   0000002A   0x9000             STR      R0,[SP, #+0]
+   \   0000002C   0x233D             MOVS     R3,#+61
+   \   0000002E   0xF241 0x3288      MOVW     R2,#+5000
+   \   00000032   0x2100             MOVS     R1,#+0
+   \   00000034   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000036   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     22                  LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_LEFT_MOTOR_CH, 0);
+   \   0000003A   0x2200             MOVS     R2,#+0
+   \   0000003C   0x2100             MOVS     R1,#+0
+   \   0000003E   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000040   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     23              
+     24          #ifdef MOTOR_BIPOLAR    
+     25              LPLD_FTM_PWM_Enable(PWM_MOTOR_FTM, PWM_LEFT_MOTOR_CH1, HALF_DUTY, PWM_LEFT_MOTOR_PIN1, ALIGN_LEFT);
+     26          #endif
+     27              
+     28          	// 右轮电机PWM使能
+     29          	LPLD_FTM_PWM_Enable(PWM_MOTOR_FTM, PWM_RIGHT_MOTOR_CH, HALF_DUTY, PWM_RIGHT_MOTOR_PIN, ALIGN_LEFT);//单极性PWM要为0
+   \   00000044   0x2028             MOVS     R0,#+40
+   \   00000046   0x9000             STR      R0,[SP, #+0]
+   \   00000048   0x233F             MOVS     R3,#+63
+   \   0000004A   0xF241 0x3288      MOVW     R2,#+5000
+   \   0000004E   0x2102             MOVS     R1,#+2
+   \   00000050   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000052   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     30                  LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_RIGHT_MOTOR_CH, 0);
+   \   00000056   0x2200             MOVS     R2,#+0
+   \   00000058   0x2102             MOVS     R1,#+2
+   \   0000005A   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   0000005C   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     31              
+     32          #ifdef MOTOR_BIPOLAR       
+     33              LPLD_FTM_PWM_Enable(PWM_MOTOR_FTM, PWM_RIGHT_MOTOR_CH1, HALF_DUTY, PWM_RIGHT_MOTOR_PIN1, ALIGN_LEFT);
+     34          #endif    
+     35              
+     36          }
+   \   00000060   0xBD07             POP      {R0-R2,PC}       ;; return
+     37          
+
+   \                                 In section .text, align 2, keep-with-next
+     38          void Servo_PWM_Init(void)
+     39          {
+   \                     Servo_PWM_Init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     40              //舵机初始化       
+     41          	g_ftm_servo_struct.FTM_Ftmx = PWM_SERVO_FTM;		
+   \   00000002   0x....             LDR.N    R0,??DataTable4_2  ;; 0x40039000
+   \   00000004   0x....             LDR.N    R1,??DataTable4_3
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     42          	g_ftm_servo_struct.FTM_Mode = FTM_MODE_PWM;			//PWM模式
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable4_3
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     43          	g_ftm_servo_struct.FTM_PwmFreq = PWM_Servo_PER_1S;		//频率20000Hz    
+   \   0000000E   0x2032             MOVS     R0,#+50
+   \   00000010   0x....             LDR.N    R1,??DataTable4_3
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     44              
+     45          	// 初始化FTM
+     46          	LPLD_FTM_Init(g_ftm_servo_struct); 
+   \   00000014   0x....             LDR.N    R1,??DataTable4_3
+   \   00000016   0xB084             SUB      SP,SP,#+16
+   \   00000018   0x4668             MOV      R0,SP
+   \   0000001A   0x221C             MOVS     R2,#+28
+   \   0000001C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000020   0xBC0F             POP      {R0-R3}
+   \   00000022   0x.... 0x....      BL       LPLD_FTM_Init
+     47              
+     48              //舵机PWM使能
+     49          	LPLD_FTM_PWM_Enable(PWM_SERVO_FTM, PWM_SERVO_CH, 0, PWM_SERVO_PIN, ALIGN_LEFT);    
+   \   00000026   0x2028             MOVS     R0,#+40
+   \   00000028   0x9000             STR      R0,[SP, #+0]
+   \   0000002A   0x2309             MOVS     R3,#+9
+   \   0000002C   0x2200             MOVS     R2,#+0
+   \   0000002E   0x2101             MOVS     R1,#+1
+   \   00000030   0x....             LDR.N    R0,??DataTable4_2  ;; 0x40039000
+   \   00000032   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     50          }
+   \   00000036   0xBD07             POP      {R0-R2,PC}       ;; return
+     51          
+     52          
+
+   \                                 In section .text, align 2, keep-with-next
+     53          void Change_PWM_Servo(uint32 DUTY)
+     54          {
+   \                     Change_PWM_Servo: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     55              LPLD_FTM_PWM_ChangeDuty(PWM_SERVO_FTM, PWM_SERVO_CH, DUTY);
+   \   00000002   0x0002             MOVS     R2,R0
+   \   00000004   0x2101             MOVS     R1,#+1
+   \   00000006   0x....             LDR.N    R0,??DataTable4_2  ;; 0x40039000
+   \   00000008   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     56          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+     57          
+     58          // 修改左轮占空比
+
+   \                                 In section .text, align 2, keep-with-next
+     59          void Change_PWM_Motor_Left(uint32 DUTY)
+     60          {
+   \                     Change_PWM_Motor_Left: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     61          	uint32 left_pwm_duty = 0;
+   \   00000002   0x2300             MOVS     R3,#+0
+     62          
+     63          	left_pwm_duty = DUTY;
+   \   00000004   0x0003             MOVS     R3,R0
+     64          
+     65          	// 占空比限幅
+     66          	left_pwm_duty = (uint32)Limiter(left_pwm_duty, MIN_DUTY, MAX_DUTY);
+   \   00000006   0x....             LDR.N    R2,??DataTable4_4  ;; 0x461c4000
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x000C             MOVS     R4,R1
+   \   0000000C   0x0015             MOVS     R5,R2
+   \   0000000E   0x0018             MOVS     R0,R3
+   \   00000010   0x.... 0x....      BL       __aeabi_ui2f
+   \   00000014   0x002A             MOVS     R2,R5
+   \   00000016   0x0021             MOVS     R1,R4
+   \   00000018   0x.... 0x....      BL       Limiter
+   \   0000001C   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000020   0x0003             MOVS     R3,R0
+     67          
+     68          	// 修改左轮占空比
+     69              LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_LEFT_MOTOR_CH, left_pwm_duty);
+   \   00000022   0x001A             MOVS     R2,R3
+   \   00000024   0x2100             MOVS     R1,#+0
+   \   00000026   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000028   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     70              
+     71          #ifdef MOTOR_BIPOLAR       
+     72              LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_LEFT_MOTOR_CH1, 10000 - left_pwm_duty);
+     73          #endif        
+     74              
+     75          }
+   \   0000002C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+     76          
+     77          
+     78          // 修改右轮占空比
+
+   \                                 In section .text, align 2, keep-with-next
+     79          void Change_PWM_Motor_Right(uint32 DUTY)
+     80          {
+   \                     Change_PWM_Motor_Right: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     81          	uint32 right_pwm_duty = 0;
+   \   00000002   0x2300             MOVS     R3,#+0
+     82          
+     83          	right_pwm_duty = DUTY;
+   \   00000004   0x0003             MOVS     R3,R0
+     84          
+     85          	// 占空比限幅
+     86          	right_pwm_duty = (uint32)Limiter(right_pwm_duty, MIN_DUTY, MAX_DUTY);
+   \   00000006   0x....             LDR.N    R2,??DataTable4_4  ;; 0x461c4000
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x000C             MOVS     R4,R1
+   \   0000000C   0x0015             MOVS     R5,R2
+   \   0000000E   0x0018             MOVS     R0,R3
+   \   00000010   0x.... 0x....      BL       __aeabi_ui2f
+   \   00000014   0x002A             MOVS     R2,R5
+   \   00000016   0x0021             MOVS     R1,R4
+   \   00000018   0x.... 0x....      BL       Limiter
+   \   0000001C   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000020   0x0003             MOVS     R3,R0
+     87          
+     88          	// 修改右轮占空比
+     89              LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_RIGHT_MOTOR_CH, right_pwm_duty);
+   \   00000022   0x001A             MOVS     R2,R3
+   \   00000024   0x2102             MOVS     R1,#+2
+   \   00000026   0x....             LDR.N    R0,??DataTable4  ;; 0x40038000
+   \   00000028   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     90              
+     91          #ifdef MOTOR_BIPOLAR       
+     92              LPLD_FTM_PWM_ChangeDuty(PWM_MOTOR_FTM, PWM_RIGHT_MOTOR_CH1, 10000 - right_pwm_duty);
+     93          #endif       
+     94              
+     95          }
+   \   0000002C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0x........         DC32     g_ftm_motor_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_3:
+   \   00000000   0x........         DC32     g_ftm_servo_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_4:
+   \   00000000   0x461C4000         DC32     0x461c4000
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   Change_PWM_Motor_Left
+        16   -> LPLD_FTM_PWM_ChangeDuty
+        16   -> Limiter
+        16   -> __aeabi_f2uiz
+        16   -> __aeabi_ui2f
+      16   Change_PWM_Motor_Right
+        16   -> LPLD_FTM_PWM_ChangeDuty
+        16   -> Limiter
+        16   -> __aeabi_f2uiz
+        16   -> __aeabi_ui2f
+       8   Change_PWM_Servo
+         8   -> LPLD_FTM_PWM_ChangeDuty
+      32   Motor_PWM_Init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_ChangeDuty
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+      32   Servo_PWM_Init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+       4  ??DataTable4_3
+       4  ??DataTable4_4
+      46  Change_PWM_Motor_Left
+      46  Change_PWM_Motor_Right
+      14  Change_PWM_Servo
+      98  Motor_PWM_Init
+      56  Servo_PWM_Init
+      28  g_ftm_motor_struct
+      28  g_ftm_servo_struct
+
+ 
+  56 bytes in section .bss
+ 280 bytes in section .text
+ 
+ 280 bytes of CODE memory
+  56 bytes of DATA memory
+
+Errors: none
+Warnings: none

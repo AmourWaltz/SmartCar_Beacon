@@ -1,0 +1,195 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       27/Jul/2018  20:43:45
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\beep.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\beep.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\beep.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\beep.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\src\beep.c
+      1          #include "beep.h"
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void Beep_Init()
+      4          {
+   \                     Beep_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      5              GPIO_Init(BEEP_PORT, BEEP_PIN_MASK, DIR_OUTPUT, BEEP_OFF_LV);             
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0x2201             MOVS     R2,#+1
+   \   00000006   0xF05F 0x6180      MOVS     R1,#+67108864
+   \   0000000A   0x....             LDR.N    R0,??DataTable3  ;; 0x400ff100
+   \   0000000C   0x.... 0x....      BL       GPIO_Init
+      6          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+      7          
+
+   \                                 In section .text, align 2, keep-with-next
+      8          void Beep_On()
+      9          {
+   \                     Beep_On: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     10              if (guc_beep_CTL_flag == OFF)
+   \   00000002   0x....             LDR.N    R0,??DataTable3_1
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD102             BNE.N    ??Beep_On_0
+     11              {
+     12                  Beep_Off();
+   \   0000000A   0x.... 0x....      BL       Beep_Off
+   \   0000000E   0xE004             B.N      ??Beep_On_1
+     13              }
+     14              else
+     15              {
+     16                  LPLD_GPIO_Output_b(BEEP_PORT, BEEP_PIN, BEEP_ON_LV);
+   \                     ??Beep_On_0: (+1)
+   \   00000010   0x2201             MOVS     R2,#+1
+   \   00000012   0x211A             MOVS     R1,#+26
+   \   00000014   0x....             LDR.N    R0,??DataTable3  ;; 0x400ff100
+   \   00000016   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     17              }
+     18          }
+   \                     ??Beep_On_1: (+1)
+   \   0000001A   0xBD01             POP      {R0,PC}          ;; return
+     19          
+
+   \                                 In section .text, align 2, keep-with-next
+     20          void Beep_Off()
+     21          {
+   \                     Beep_Off: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     22              LPLD_GPIO_Output_b(BEEP_PORT, BEEP_PIN, BEEP_OFF_LV);
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x211A             MOVS     R1,#+26
+   \   00000006   0x....             LDR.N    R0,??DataTable3  ;; 0x400ff100
+   \   00000008   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     23          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+     24          
+
+   \                                 In section .text, align 2, keep-with-next
+     25          void Get_Beep_State(uint8 *u8State)
+     26          {    
+   \                     Get_Beep_State: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     27              *u8State = LPLD_GPIO_Input_b(BEEP_PORT, BEEP_PIN);
+   \   00000004   0x211A             MOVS     R1,#+26
+   \   00000006   0x....             LDR.N    R0,??DataTable3  ;; 0x400ff100
+   \   00000008   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   0000000C   0x7020             STRB     R0,[R4, #+0]
+     28          }
+   \   0000000E   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \   00000000   0x........         DC32     guc_beep_CTL_flag
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Beep_Init
+         8   -> GPIO_Init
+       8   Beep_Off
+         8   -> LPLD_GPIO_Output_b
+       8   Beep_On
+         8   -> Beep_Off
+         8   -> LPLD_GPIO_Output_b
+       8   Get_Beep_State
+         8   -> LPLD_GPIO_Input_b
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+      18  Beep_Init
+      14  Beep_Off
+      28  Beep_On
+      16  Get_Beep_State
+
+ 
+ 84 bytes in section .text
+ 
+ 84 bytes of CODE memory
+
+Errors: none
+Warnings: none

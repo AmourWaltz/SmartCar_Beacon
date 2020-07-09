@@ -1,0 +1,242 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       19/Jul/2019  16:52:13
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\avoidance.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\avoidance.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\List" -lB
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\RAM\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\control\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\debug\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\device\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\driver\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\signal\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\system\" -Ol -I "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include\"
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\RAM\List\avoidance.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\RAM\Obj\avoidance.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\src\avoidance.c
+      1          /*=============================================
+      2              @file         avoidance.c
+      3              @brief        红外避障
+      4              @programmer   XBY
+      5          =============================================*/
+      6          
+      7          #include "avoidance.h"
+      8          
+      9          /*===============================================================
+     10          	@brief     红外避障AD初始化
+     11          ==================================================================*/
+     12          
+
+   \                                 In section .text, align 2, keep-with-next
+     13          void TELE_AD_Init()
+     14          {
+   \                     TELE_AD_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     15              LPLD_ADC_Chn_Enable(TELE_ADC_ID, TELE_ADC_CH);
+   \   00000002   0x2114             MOVS     R1,#+20
+   \   00000004   0x....             LDR.N    R0,??DataTable2  ;; 0x4003b000
+   \   00000006   0x.... 0x....      BL       LPLD_ADC_Chn_Enable
+     16          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     17          
+     18          /*===============================================================
+     19          	@brief     红外AD均值滤波
+     20          ==================================================================*/
+     21          
+
+   \                                 In section .text, align 2, keep-with-next
+     22          uint16 Get_TELE_ADC_Ave()
+     23          {
+   \                     Get_TELE_ADC_Ave: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     24              uint8 i;
+     25              uint16 tele_adc_temp;
+     26              uint16 tele_adc_add;
+     27              
+     28              tele_adc_add = 0;
+   \   00000002   0x2500             MOVS     R5,#+0
+     29              
+     30              for(i = 0;i < AVE_TIMES;i++)
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0xE005             B.N      ??Get_TELE_ADC_Ave_0
+     31              {
+     32                  tele_adc_add += LPLD_ADC_Get(TELE_ADC_ID, TELE_ADC_CH);
+   \                     ??Get_TELE_ADC_Ave_1: (+1)
+   \   00000008   0x2114             MOVS     R1,#+20
+   \   0000000A   0x....             LDR.N    R0,??DataTable2  ;; 0x4003b000
+   \   0000000C   0x.... 0x....      BL       LPLD_ADC_Get
+   \   00000010   0x1945             ADDS     R5,R0,R5
+     33              }
+   \   00000012   0x1C64             ADDS     R4,R4,#+1
+   \                     ??Get_TELE_ADC_Ave_0: (+1)
+   \   00000014   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000016   0x2C03             CMP      R4,#+3
+   \   00000018   0xDBF6             BLT.N    ??Get_TELE_ADC_Ave_1
+     34              
+     35              tele_adc_temp = (uint16)(tele_adc_add / AVE_TIMES);
+   \   0000001A   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000001C   0x2003             MOVS     R0,#+3
+   \   0000001E   0xFB95 0xF0F0      SDIV     R0,R5,R0
+     36              
+     37              return tele_adc_temp;
+   \   00000022   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000024   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+     38          }
+     39          
+     40          /*===============================================================
+     41          	@brief     红外测距获取
+     42          	@function  根据红外读取的AD值计算红外测距
+     43          ==================================================================*/
+     44          
+
+   \                                 In section .text, align 2, keep-with-next
+     45          void Barrier_Distance()
+     46          {
+   \                     Barrier_Distance: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     47              uint16 barrier_temp;
+     48            
+     49              barrier_temp = Get_TELE_ADC_Ave();
+   \   00000002   0x.... 0x....      BL       Get_TELE_ADC_Ave
+     50              
+     51              gi_tele_barrier_distance = (6762*2/(barrier_temp-9));
+   \   00000006   0xF243 0x41D4      MOVW     R1,#+13524
+   \   0000000A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000C   0x3809             SUBS     R0,R0,#+9
+   \   0000000E   0xFB91 0xF0F0      SDIV     R0,R1,R0
+   \   00000012   0x....             LDR.N    R1,??DataTable2_1
+   \   00000014   0x8008             STRH     R0,[R1, #+0]
+     52              
+     53              if(gi_tele_barrier_distance < 50)
+   \   00000016   0x....             LDR.N    R0,??DataTable2_1
+   \   00000018   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   0000001C   0x2832             CMP      R0,#+50
+   \   0000001E   0xDA05             BGE.N    ??Barrier_Distance_0
+     54              {
+     55                gc_tele_barrier_count++;
+   \   00000020   0x....             LDR.N    R0,??DataTable2_2
+   \   00000022   0x7800             LDRB     R0,[R0, #+0]
+   \   00000024   0x1C40             ADDS     R0,R0,#+1
+   \   00000026   0x....             LDR.N    R1,??DataTable2_2
+   \   00000028   0x7008             STRB     R0,[R1, #+0]
+   \   0000002A   0xE002             B.N      ??Barrier_Distance_1
+     56              }
+     57              else 
+     58                gc_tele_barrier_count = NO_BARRIER;
+   \                     ??Barrier_Distance_0: (+1)
+   \   0000002C   0x2000             MOVS     R0,#+0
+   \   0000002E   0x....             LDR.N    R1,??DataTable2_2
+   \   00000030   0x7008             STRB     R0,[R1, #+0]
+     59          }
+   \                     ??Barrier_Distance_1: (+1)
+   \   00000032   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x4003B000         DC32     0x4003b000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     gi_tele_barrier_distance
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x........         DC32     gc_tele_barrier_count
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Barrier_Distance
+         8   -> Get_TELE_ADC_Ave
+      16   Get_TELE_ADC_Ave
+        16   -> LPLD_ADC_Get
+       8   TELE_AD_Init
+         8   -> LPLD_ADC_Chn_Enable
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+      52  Barrier_Distance
+      38  Get_TELE_ADC_Ave
+      12  TELE_AD_Init
+
+ 
+ 114 bytes in section .text
+ 
+ 114 bytes of CODE memory
+
+Errors: none
+Warnings: none

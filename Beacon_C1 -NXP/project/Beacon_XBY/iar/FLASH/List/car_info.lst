@@ -1,0 +1,598 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       27/Jul/2018  20:43:46
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\system\car_info.c
+#    Command line =  
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\system\car_info.c" -D LPLD_K60 -lCN
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\List"
+#        -lB "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List" -o
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\iar\FLASH\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\INC\c\DLib_Config_Normal.h" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\app\" -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\CPU\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\HW\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\FatFs\option\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\common\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\driver\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\descriptor\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\USB\class\" -I
+#        "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\..\..\..\lib\LPLD\FUNC\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\driver\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\driver\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\control\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\control\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\debug\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\debug\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\device\src\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\device\inc\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\signal\inc\"
+#        -I "D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\app\signal\src\" -I
+#        "D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\" -Ol
+#        -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Simplified)_China.936
+#    List file    =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\List\car_info.lst
+#    Object file  =  
+#        D:\Freescale\信标\Beacon_C1
+#        -NXP\project\Beacon_XBY\iar\FLASH\Obj\car_info.o
+#
+###############################################################################
+
+D:\Freescale\信标\Beacon_C1 -NXP\project\Beacon_XBY\app\system\car_info.c
+      1          /*=============================================
+      2              @file         car_info.c
+      3              @brief        小车参变量设置      
+      4              @programmer   XBY
+      5          =============================================*/
+      6          
+      7          #include "include.h"
+      8          
+      9          //小车状态变量参数
+
+   \                                 In section .bss, align 4
+     10          uint32 gul_time_100us;//0.1ms计时，用于红外传感器
+   \                     gul_time_100us:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     11          uint32 gul_time_start;//起始发车时间
+   \                     gul_time_start:
+   \   00000000                      DS8 4
+     12          
+
+   \                                 In section .bss, align 1
+     13          uint8 guc_beep_CTL_flag;//蜂鸣器标志
+   \                     guc_beep_CTL_flag:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     14          uint8 guc_car_run_flag = OFF;//小车起跑标志位
+   \                     guc_car_run_flag:
+   \   00000000                      DS8 1
+     15          
+     16          
+
+   \                                 In section .bss, align 4
+     17          int16 oled_data[16];
+   \                     oled_data:
+   \   00000000                      DS8 32
+
+   \                                 In section .bss, align 2
+     18          uint8 guc_switch_pin_val[2];//拨码值存储
+   \                     guc_switch_pin_val:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+     19          float gf_VisualScopeData[10];//传送给虚拟示波器的数据
+   \                     gf_VisualScopeData:
+   \   00000000                      DS8 40
+     20          
+     21          //速度
+
+   \                                 In section .bss, align 4
+     22          float gf_speed_p;//速度控制比例系数
+   \                     gf_speed_p:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     23          float gf_speed_i;//速度控制积分系数
+   \                     gf_speed_i:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     24          float gf_speed_d;//速度控制微分系数
+   \                     gf_speed_d:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     25          float gf_angle_speed_kp;//弯道减速系数
+   \                     gf_angle_speed_kp:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     26          float gf_dece_kp;//图像面积减速系数
+   \                     gf_dece_kp:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     27          float gf_acce_kp;//图像面积加速系数
+   \                     gf_acce_kp:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+     28          int16 gi_area_thredhold_1;//一段减速面积阈值
+   \                     gi_area_thredhold_1:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     29          int16 gi_area_thredhold_2;//二段减速面积阈值
+   \                     gi_area_thredhold_2:
+   \   00000000                      DS8 2
+     30          
+
+   \                                 In section .bss, align 4
+     31          int32 gl_car_speed;//小车速度检测值
+   \                     gl_car_speed:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     32          int32 gl_car_running_distance;//行驶路程，编码器检测
+   \                     gl_car_running_distance:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     33          int32 gl_speed_set;//速度设定值 
+   \                     gl_speed_set:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     34          int32 gl_pwm_out;//电机PWM输出,数值为实际电机在速度分量上的PWM输出
+   \                     gl_pwm_out:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     35          int32 gl_div_pwm_out;//左右轮差速
+   \                     gl_div_pwm_out:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+     36          int16 gi_left_speed;//左轮速度
+   \                     gi_left_speed:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     37          int16 gi_right_speed;//右轮速度
+   \                     gi_right_speed:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+     38          int32 gl_left_encoder_count;//左轮编码器计数
+   \                     gl_left_encoder_count:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     39          int32 gl_right_encoder_count;//右轮编码器计数
+   \                     gl_right_encoder_count:
+   \   00000000                      DS8 4
+     40          
+     41          
+     42          //方向
+
+   \                                 In section .bss, align 2
+     43          int16  gi_image_err;//舵机正向与图像中心偏差值
+   \                     gi_image_err:
+   \   00000000                      DS8 2
+     44          
+
+   \                                 In section .bss, align 4
+     45          float  gf_direction_p;//方向控制比例系数
+   \                     gf_direction_p:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     46          float  gf_direction_d;//方向控制微分系数
+   \                     gf_direction_d:
+   \   00000000                      DS8 4
+     47          
+
+   \                                 In section .bss, align 4
+     48          int32  gl_direction_set;//小车舵机打角值 
+   \                     gl_direction_set:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     49          int32  gl_servo_angle;//舵机打角角度
+   \                     gl_servo_angle:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     50          int32  gl_servo_pwm;//舵机输出PWM
+   \                     gl_servo_pwm:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     51          int32  gl_servo_center;//舵机中心值对应的PWM
+   \                     gl_servo_center:
+   \   00000000                      DS8 4
+     52          
+     53          //电流环
+
+   \                                 In section .bss, align 2
+     54          uint16 gui_16bat_voltage;
+   \                     gui_16bat_voltage:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     55          uint16 gui_16bat_ADC;
+   \                     gui_16bat_ADC:
+   \   00000000                      DS8 2
+     56          
+     57          //摄像头
+
+   \                                 In section .bss, align 1
+     58          uint8 g_u8DigitalCameraThreshold;////摄像头阈值，为表示对野火底层尊重，此变量名不做修改
+   \                     g_u8DigitalCameraThreshold:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+     59          uint8 (*guc_image_source)[CAMERA_W];//
+   \                     guc_image_source:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+     60          uint8 guc_camera_image_Ok;//显示图像标志位
+   \                     guc_camera_image_Ok:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+     61          uint32 gul_image_period;
+   \                     gul_image_period:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     62          uint32 gul_image_process_time;
+   \                     gul_image_process_time:
+   \   00000000                      DS8 4
+     63          
+     64          
+     65          //图像
+
+   \                                 In section .bss, align 4
+     66          int16  gi_edge_left[IMAGE_HEIGHT];//信标灯左边缘
+   \                     gi_edge_left:
+   \   00000000                      DS8 128
+
+   \                                 In section .bss, align 4
+     67          int16  gi_edge_right[IMAGE_HEIGHT];//信标灯右边缘
+   \                     gi_edge_right:
+   \   00000000                      DS8 128
+
+   \                                 In section .bss, align 2
+     68          int16  gi_edge_left_value;//左侧边界值
+   \                     gi_edge_left_value:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     69          int16  gi_edge_right_value;//右侧边界值
+   \                     gi_edge_right_value:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     70          int16  gi_left_count;//左边界行数
+   \                     gi_left_count:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     71          int16  gi_right_count;//右边界行数
+   \                     gi_right_count:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     72          int16  gi_image_center;//信标横向中心
+   \                     gi_image_center:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     73          int16  gi_image_vertical;//信标纵向中心
+   \                     gi_image_vertical:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     74          int16  gi_end_line;//起始行
+   \                     gi_end_line:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     75          int16  gi_start_line;//截止行
+   \                     gi_start_line:
+   \   00000000                      DS8 2
+     76          
+
+   \                                 In section .bss, align 4
+     77          vuint8 imageshow[IMAGE_HEIGHT][IMAGE_WIDTH];//图像显示数组
+   \                     imageshow:
+   \   00000000                      DS8 8192
+
+   \                                 In section .bss, align 4
+     78          vuint8 (*guc_cur_image)[IMAGE_WIDTH];//图像临时储存数组
+   \                     guc_cur_image:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+     79          int16  gi_image_area;//信标矫正后面积
+   \                     gi_image_area:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+     80          uint8  guc_find_image_flag;//视野是否找到标志位
+   \                     guc_find_image_flag:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 1
+     81          uint8  guc_center_flag=2;//切灯方位标志位
+   \                     guc_center_flag:
+   \   00000000   0x02               DC8 2
+
+   \                                 In section .bss, align 4
+     82          uint8 guc_corrected_image[IMAGE_HEIGHT][IMAGE_WIDTH];//取行列后的图像
+   \                     guc_corrected_image:
+   \   00000000                      DS8 8192
+     83          
+
+   \                                 In section .bss, align 4
+     84          float  gf_center_err_P;//旁侧切灯中心偏差比例
+   \                     gf_center_err_P:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     85          float  gf_beacon_offset_P;//切灯系数
+   \                     gf_beacon_offset_P:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+     86          int8  gc_left_offset;//左切误差弥补
+   \                     gc_left_offset:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     87          int8  gc_right_offset;//右切误差弥补
+   \                     gc_right_offset:
+   \   00000000                      DS8 1
+     88          
+
+   \                                 In section .bss, align 2
+     89          int16 gi_image_left_ave;//均值处理后左边界
+   \                     gi_image_left_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     90          int16 gi_image_right_ave;//均值处理后右边界
+   \                     gi_image_right_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     91          int16 gi_image_center_ave;//均值后中心线
+   \                     gi_image_center_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     92          int16 gi_image_area_ave;//均值后面积
+   \                     gi_image_area_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     93          int16 gi_image_start_ave;//均值处理后上边界
+   \                     gi_image_start_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     94          int16 gi_image_end_ave;//均值处理后下边界
+   \                     gi_image_end_ave:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+     95          int16 gi_image_vertical_ave;//均值后纵向值
+   \                     gi_image_vertical_ave:
+   \   00000000                      DS8 2
+     96          
+
+   \                                 In section .bss, align 1
+     97          int8 gc_not_found_count;//判断失去视野的采集次数
+   \                     gc_not_found_count:
+   \   00000000                      DS8 1
+     98          
+
+   \                                 In section .bss, align 4
+     99          int img_furthest_line;
+   \                     img_furthest_line:
+   \   00000000                      DS8 4
+    100          
+    101          //超声波测距
+
+   \                                 In section .bss, align 2
+    102          int16 gi_ultrasonic_distance;//超声波测距
+   \                     gi_ultrasonic_distance:
+   \   00000000                      DS8 2
+    103          
+    104          //超声波定向
+
+   \                                 In section .bss, align 4
+    105          int16 gi_ultrasonic_value[NUM_ULTRASONIC];//超声波AD转换值
+   \                     gi_ultrasonic_value:
+   \   00000000                      DS8 12
+
+   \                                 In section .bss, align 4
+    106          int16 gi_ultrasonic_history[NUM_ULTRASONIC][NUM_ULTRASONIC_HISTORY];//超声波AD转换值历史值
+   \                     gi_ultrasonic_history:
+   \   00000000                      DS8 60
+    107          //int16 gi_ultrasonic_offset_x;//超声波横向差比和
+
+   \                                 In section .bss, align 2
+    108          int16 gi_ultrasonic_offset_y;//超声波纵向差比和
+   \                     gi_ultrasonic_offset_y:
+   \   00000000                      DS8 2
+    109          //float gf_ultrasonic_angle;//超声波定向角度
+
+   \                                 In section .bss, align 1
+    110          uint8 guc_beacon_count;//超声波跳变灭灯计数
+   \                     guc_beacon_count:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+    111          uint8 guc_beacon_directional_x;//超声波x轴定向
+   \                     guc_beacon_directional_x:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+    112          uint8 guc_beacon_directional_y;//超声波y轴定向
+   \                     guc_beacon_directional_y:
+   \   00000000                      DS8 1
+    113          
+    114          //红外避障
+
+   \                                 In section .bss, align 2
+    115          int16 gi_tele_barrier_distance;//红外测得障碍物距离
+   \                     gi_tele_barrier_distance:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+    116          int8 gc_tele_barrier_count;//红外避障计数
+   \                     gc_tele_barrier_count:
+   \   00000000                      DS8 1
+    117          
+    118          //红外定向
+
+   \                                 In section .bss, align 4
+    119          uint8 guc_infrared_value[8];//八路红外检测电平
+   \                     guc_infrared_value:
+   \   00000000                      DS8 8
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  g_u8DigitalCameraThreshold
+       1  gc_left_offset
+       1  gc_not_found_count
+       1  gc_right_offset
+       1  gc_tele_barrier_count
+      40  gf_VisualScopeData
+       4  gf_acce_kp
+       4  gf_angle_speed_kp
+       4  gf_beacon_offset_P
+       4  gf_center_err_P
+       4  gf_dece_kp
+       4  gf_direction_d
+       4  gf_direction_p
+       4  gf_speed_d
+       4  gf_speed_i
+       4  gf_speed_p
+       2  gi_area_thredhold_1
+       2  gi_area_thredhold_2
+     128  gi_edge_left
+       2  gi_edge_left_value
+     128  gi_edge_right
+       2  gi_edge_right_value
+       2  gi_end_line
+       2  gi_image_area
+       2  gi_image_area_ave
+       2  gi_image_center
+       2  gi_image_center_ave
+       2  gi_image_end_ave
+       2  gi_image_err
+       2  gi_image_left_ave
+       2  gi_image_right_ave
+       2  gi_image_start_ave
+       2  gi_image_vertical
+       2  gi_image_vertical_ave
+       2  gi_left_count
+       2  gi_left_speed
+       2  gi_right_count
+       2  gi_right_speed
+       2  gi_start_line
+       2  gi_tele_barrier_distance
+       2  gi_ultrasonic_distance
+      60  gi_ultrasonic_history
+       2  gi_ultrasonic_offset_y
+      12  gi_ultrasonic_value
+       4  gl_car_running_distance
+       4  gl_car_speed
+       4  gl_direction_set
+       4  gl_div_pwm_out
+       4  gl_left_encoder_count
+       4  gl_pwm_out
+       4  gl_right_encoder_count
+       4  gl_servo_angle
+       4  gl_servo_center
+       4  gl_servo_pwm
+       4  gl_speed_set
+       1  guc_beacon_count
+       1  guc_beacon_directional_x
+       1  guc_beacon_directional_y
+       1  guc_beep_CTL_flag
+       1  guc_camera_image_Ok
+       1  guc_car_run_flag
+       1  guc_center_flag
+    8192  guc_corrected_image
+       4  guc_cur_image
+       1  guc_find_image_flag
+       4  guc_image_source
+       8  guc_infrared_value
+       2  guc_switch_pin_val
+       2  gui_16bat_ADC
+       2  gui_16bat_voltage
+       4  gul_image_period
+       4  gul_image_process_time
+       4  gul_time_100us
+       4  gul_time_start
+    8192  imageshow
+       4  img_furthest_line
+      32  oled_data
+
+ 
+ 16 970 bytes in section .bss
+      1 byte  in section .data
+ 
+ 16 971 bytes of DATA memory
+
+Errors: none
+Warnings: none
